@@ -1,0 +1,90 @@
+.containerWidth{
+  background-color: black;
+  height: 160rem;
+  width: 100% !important;
+}
+.title{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.subTitleCourses{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+.secondaryTitle{
+  color: white;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+.imgDimentionsForCourses{
+  width: 20rem;
+}
+
+.material-symbols-outlined {
+  color: #C7E902;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 48
+}
+.marginForRight{
+  margin-left: 4rem ;
+  margin-top: 2rem;
+}
+
+.subtitleDiv{
+  display: flex;
+}
+.viewAll{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  // margin-top: 2rem;
+}
+
+.marginAutoViewAll{
+  margin-top: 1rem !important;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.allImgDiv{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.coursesDesigned{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+
+@media screen and (min-width: 767px) {
+  .title{
+    font-size: 3rem;
+  }
+  .secondaryTitle{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  .containerWidth{
+    background-color: black !important;
+    height: 60rem;
+    width: 100% !important;
+  }
+  .containerCoursesFlex{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+  }
+  .imgDimentionsForCourses{
+    width: 15rem !important;
+  }
+}

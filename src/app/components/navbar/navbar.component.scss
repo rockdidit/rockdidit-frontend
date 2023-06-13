@@ -1,0 +1,77 @@
+.navbar {
+  background-color: rgb(255, 255, 255) !important;
+
+  .logo {
+    width: 10rem;
+    height: 4rem;
+  }
+}
+
+.material-symbols-outlined {
+  font-size: 3rem;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+.font {
+  font-family: 'Poppins', sans-serif;
+}
+
+.enrollNow {
+  margin-top: 0.7rem;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerWeb {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .contanerSon{
+    width: 66rem;
+  }
+  .arrowButton {
+    color: #C7E902;
+  }
+  .menuButtonMobile {
+    display: none;
+  }
+  .containerWeb {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .selectors {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    span:hover,
+    span:active {
+      text-decoration: underline;
+    }
+
+    span {
+      cursor: pointer;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+  .enrollContainer {
+    margin: auto;
+    justify-content: end;
+    display: flex;
+}
+
+}

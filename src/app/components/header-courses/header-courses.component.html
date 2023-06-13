@@ -1,0 +1,37 @@
+<div class="containerWidth">
+  <div class="coursesDesigned pt-5">
+    <h2   class="title">
+      COURSES <br />
+      DESIGNED
+    </h2>
+  </div>
+  <div class="coursesDesigned">
+    <h1 class="secondaryTitle">FOR YOU</h1>
+  </div>
+  <div class="containerCoursesFlex">
+      <ng-container *ngFor="let item of courses">
+      <div>
+        <div class="allImgDiv">
+          <img
+            class="imgDimentionsForCourses"
+            [src]="item.img"
+            alt=""
+          />
+        </div>
+        <div class="subtitleDiv">
+          <h2 class="subTitleCourses">
+            {{item.title1}} <br />
+            {{item.title2}}
+          </h2>
+          <div class="marginForRight">
+            <span style="font-size: 3rem;" class="material-symbols-outlined"> arrow_forward_ios </span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    </div>
+  <div class="d-flex marginAutoViewAll">
+    <span style="font-size: 3rem;" class="material-symbols-outlined"> arrow_forward_ios </span>
+    <h2 class="viewAll">View All</h2>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+@media screen and (min-width: 768px) {
+  .fatherMobile{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fatherWeb{
+    display: none;
+  }
+}
+
+.material-symbols-outlined {
+  color: #C7E902;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 48
+}
+.colorIcon{
+  background-color: #C7E902;
+  border-radius: 100%;
+}
+.containerAbstraction{
+  width: 25rem;
+
+}
+
+.missionStyle{
+  margin-left: 10rem !important;
+}
+
+.containerTextP {
+  width: 25rem;
+}
+
+.containerTextP h3 {
+  margin-top: 0;
+}
+
+.containerTextP p {
+  margin-top: 1rem;
+}
+
+
+.icon-thick{
+  font-weight: 900;
+  font-size: 12rem;
+  z-index: -1;
+  position:absolute;
+  margin-top: -11rem;
+}
+
+.carousel{
+  width: 90% !important;
+  margin: auto;
+  justify-content: center;
+
+}
+
+.covid{
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.titleEquipment{
+  font-family: 'Poppins', sans-serif;
+}
+.equipment{
+  margin-top: 3rem !important;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+.ourMerchandiseTitle{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  width: 80%;
+  background-color: #C7E902;
+  text-align: center;
+  margin-top: 4rem !important;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.clickHere{
+  color: black;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.covidContainer{
+  display: flex;
+  background-color: #C7E902;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  height: 3rem;
+}
+.headerTitle{
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.textContainer{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  width: 80%;
+}
+.AboutUs{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0.7rem;
+}
+
+.introImgs{
+  display: flex;
+}
+
+.feedImg{
+  width: 20rem;
+}
+
+.centerImgs{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}

@@ -1,0 +1,129 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+.eventDate{
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.containerEvent{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  background-color: #c7e902;
+  height: 23rem;
+  width: 80%;
+}
+.centerContainer{
+  justify-content: center;
+  margin: auto;
+  display: flex;
+
+}
+.containerCarousel{
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.textCenterEvent{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.bookConditionContainer{
+  display: flex;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.centerButton{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  .registerForFreeBook{
+    background-color: #c7e902;
+    width: 20rem;
+  }
+}
+.bookNowText{
+  padding-top: 0.2rem;
+}
+
+.freeBook{
+  width: 15rem;
+}
+.freeText{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  margin-top: 3rem !important;
+}
+
+.containerBook{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.bookNowContainer{
+  display: flex;
+  justify-content: end;
+  margin: auto;
+  margin-right: 1rem !important;
+}
+
+.bookNowIcon{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.centerContentEvent{
+  margin: auto;
+  justify-content: center;
+  // display: flex;
+}
+
+.centerTitle{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+.titleContainer {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-top: 10rem;
+  position: relative; // Agregamos posición relativa al contenedor
+
+  .icon-span {
+    position: absolute; // Agregamos posición absoluta al icon-span
+    top: -8rem; // Ajusta la posición vertical del icono
+    right: 0; // Ajusta la posición horizontal del icono
+    color: #c7e902;
+    z-index: -1;
+    .icon {
+      font-weight: 900;
+      font-size: 10rem;
+      display: inline-block !important;
+      transform: rotate(315deg) !important;
+    }
+  }
+}
+.font{
+  font-family: 'Poppins', sans-serif;
+}
+
+.titleText {
+  font-size: 3rem;
+  font-weight: 900;
+}
