@@ -11,15 +11,21 @@
   <ng-container class="boxFlex" *ngFor="let i of events">
     <div class="centerContainer">
       <div class="containerEvent mb-4 mt-4">
-        <div>
+        <div class="container-fluid d-flex">
           <h3 class="font eventDate centerTitle mt-5">
             {{ i.date }} <br />
             2022
           </h3>
-          <hr class="centerTitle mt-3" color="black" size="5" width="200rem" />
-          <div class="centerContentEvent">
+          <div class="vertical-line"></div>
+          <hr
+            class="centerTitle displayWeb mt-3"
+            color="black"
+            size="5"
+            width="200rem"
+          />
+          <div class="centerContentEvent EventTitleGoesHere">
             <h4 class="font mt-3 textCenterEvent">EVENT TITLE GOES HERE</h4>
-            <p class="text-center">
+            <p class="text-center loremIpsum">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
@@ -34,49 +40,70 @@
       </div>
     </div>
   </ng-container>
-  <div class="mt-5 containerBook mb-4">
-    <div>
-      <img
-        class="freeBook"
-        src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/Untitled-1.png?fit=600%2C723&ssl=1"
-        alt=""
-      />
-      <h4 class="font freeText">
-        GET 2 CHAPTERS <br />
-        FREE <br />
-        SIGN UP NOW
-      </h4>
+  <div class="boxFlexForElements">
+    <div class="mt-5 containerBook mb-4">
+      <div>
+        <img
+          class="freeBook"
+          src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/Untitled-1.png?fit=600%2C723&ssl=1"
+          alt=""
+        />
+        <h4 class="font freeText">
+          GET 2 CHAPTERS <br />
+          FREE <br />
+          SIGN UP NOW
+        </h4>
+      </div>
+    </div>
+    <div class="inputsContainer">
+      <div>
+        <h4 class="font freeTextWeb">
+          GET 2 CHAPTERS
+          FREE <br>
+          SIGN UP NOW
+        </h4>
+      </div>
+      <div >
+        <div class="row">
+          <div class="col-lg">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Name</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="centerButton mb-5">
+              <button class="btn registerForFreeBook" type="button">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bookConditionContainer mb-5">
+        <p>
+          *By signing up for my free ebook, you’ll also be joining my mailing
+          list where I send my best tips helpful content and service offers. I
+          never sell your information and you can unsubscribe anytime.
+        </p>
+      </div>
     </div>
   </div>
-  <div class="inputsContainer">
-    <div class="form-floating mb-3 mt-3">
-      <input
-        type="text"
-        class="form-control"
-        id="floatingPassword"
-        placeholder="Password"
-      />
-      <label for="floatingPassword">Name</label>
-    </div>
-    <div class="form-floating mb-3 mt-3">
-      <input
-        type="email"
-        class="form-control"
-        id="floatingInput"
-        placeholder="name@example.com"
-      />
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="centerButton mb-5">
-      <button class="btn registerForFreeBook" type="button">Button</button>
-    </div>
-    <div class="bookConditionContainer mb-5">
-      <p>
-        *By signing up for my free ebook, you’ll also be joining my mailing list
-        where I send my best tips helpful content and service offers. I never
-        sell your information and you can unsubscribe anytime.
-      </p>
-    </div>
     <div class="containerCarousel">
       <div
         id="carouselExampleSlidesOnly"
@@ -92,5 +119,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>

@@ -3,11 +3,22 @@
     display: none;
   }
 
+  .equipment{
+    width: 60% !important;
+  }
+
 }
 
 @media screen and (max-width: 1000px) {
   .fatherWeb{
     display: none;
+  }
+  .textContainer{
+    width: 20rem !important;
+  }
+
+  .equipment{
+    width: 80% !important;
   }
 }
 

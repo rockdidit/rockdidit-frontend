@@ -1,7 +1,111 @@
-@media screen and (max-width: 1000px) {
-  .titleText{
+@media screen and (max-width:1000px) {
+  .vertical-line {
+    display: none !important;
+  }
+  .containerEvent{
+    div{
+      display: block !important;
+    }
+  }
+  .freeTextWeb{
+    display: none !important;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .freeText{
+    display: none !important;
+  }
+  .freeTextWeb{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 3rem !important;
     font-size: 4rem;
   }
+  .centerButton{
+    margin: auto !important;
+    margin-top: 1.5rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+  }
+  .boxFlexForElements{
+    display: flex !important;
+  }
+  .formFlexBox{
+    display: flex;
+  }
+  .inputsContainer{
+    width: 50rem !important;
+    // width: 20rem;
+    // margin: auto;
+    // justify-content: center;
+    display: flex;
+  }
+  .titleText{
+    font-size: 10rem !important;
+  }
+  .icon{
+    font-size: 20rem !important;
+  }
+  .icon-span {
+    position: absolute;
+    top: -8rem;
+    right: 3;
+    margin-right: 4rem;
+  }
+  .displayWeb{
+    display: none !important;
+  }
+
+  .EventTitleGoesHere{
+    display: block !important;
+    width: 40rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  .textCenterEvent{
+    justify-content: start !important;
+    font-size: 3rem;
+  }
+
+  .loremIpsum{
+    text-align: start !important;
+  }
+
+  .eventDate{
+    font-size: 4rem !important;
+    margin: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    margin-left: 3rem !important;
+  }
+
+  .bookNowContainer{
+    margin-top: 18rem !important;
+    // margin-right: 1rem !important;
+    margin-left: -4rem !important;
+  }
+  .vertical-line {
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid black;
+  }
+
+  .centerContentEvent{
+    display: block !important;
+  }
+
 }
 
 
@@ -26,6 +130,7 @@
   height: 23rem;
   width: 80%;
 }
+
 .centerContainer{
   justify-content: center;
   margin: auto;
