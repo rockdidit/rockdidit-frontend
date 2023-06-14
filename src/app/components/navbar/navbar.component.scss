@@ -1,5 +1,6 @@
 .navbar {
   background-color: rgb(255, 255, 255) !important;
+  width: 100%;
 
   .logo {
     width: 10rem;
@@ -9,15 +10,11 @@
 
 .material-symbols-outlined {
   font-size: 3rem;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 .font {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .enrollNow {
@@ -30,31 +27,44 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
   .containerWeb {
     display: none;
   }
+
+  .menuButtonMobile {
+    font-size: 3rem;
+    color: #000000;
+  }
 }
 
-@media screen and (min-width: 767px) {
-  .contanerSon{
-    width: 66rem;
-  }
+@media screen and (min-width: 1000px) {
   .arrowButton {
-    color: #C7E902;
+    color: #c7e902;
   }
+
   .menuButtonMobile {
     display: none;
   }
+
   .containerWeb {
     display: flex;
     justify-content: center;
     margin: auto;
   }
+
   .selectors {
     display: flex;
     justify-content: center;
     margin: auto;
+    li:hover,
+    li:active{
+      text-decoration: underline;
+    }
+    li{
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+    }
 
     span:hover,
     span:active {
@@ -65,13 +75,13 @@
       cursor: pointer;
       margin-left: 3rem;
       margin-right: 3rem;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
   }
+
   .enrollContainer {
     margin: auto;
-    justify-content: end;
+    justify-content: start;
     display: flex;
-}
-
+  }
 }
