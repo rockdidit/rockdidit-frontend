@@ -1,12 +1,24 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .fatherMobile{
     display: none;
   }
+
+  .equipment{
+    width: 60% !important;
+  }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .fatherWeb{
     display: none;
+  }
+  .textContainer{
+    width: 20rem !important;
+  }
+
+  .equipment{
+    width: 80% !important;
   }
 }
 
@@ -23,20 +35,20 @@
   border-radius: 100%;
 }
 .containerAbstraction{
-  width: 25rem;
+  width: 20rem;
 
-}
-
-.missionStyle{
-  margin-left: 10rem !important;
 }
 
 .containerTextP {
-  width: 25rem;
+  width: 15rem;
 }
 
 .containerTextP h3 {
   margin-top: 0;
+
+}
+.containerTextP{
+  width: 20rem;
 }
 
 .containerTextP p {
@@ -52,11 +64,11 @@
   margin-top: -11rem;
 }
 
+
 .carousel{
-  width: 90% !important;
+  width: 80% !important;
   margin: auto;
   justify-content: center;
-
 }
 
 .covid{
@@ -68,6 +80,7 @@
 }
 
 .titleEquipment{
+
   font-family: 'Poppins', sans-serif;
 }
 .equipment{
@@ -75,7 +88,7 @@
   display: block;
   justify-content: center;
   margin: auto;
-  width: 80%;
+  width: 60%;
 }
 
 .material-symbols-outlined{
@@ -110,14 +123,70 @@ a {
   margin-bottom: 4rem;
 }
 
+#containerImg1{
+  margin-top: 5rem;
+  margin-left: -10rem;
+}
+
+#containerImg2{
+  margin-top: -10rem;
+  margin-left: -15rem;
+  margin-right: 10rem;
+}
+
+#containerImg3{
+  margin-left: -5rem;
+  // margin-top: -10rem;
+  // margin-left: 30rem;
+  // margin-left: -5rem;
+}
+.row{
+  width: 100%;
+}
+
 .covidContainer{
   display: flex;
   background-color: #C7E902;
-  width: 90%;
+  width: 80%;
   margin: auto;
   justify-content: center;
   height: 3rem;
 }
+
+@media screen and (min-width: 1000px) {
+  .covidContainer{
+    width: 60% !important;
+  }
+  .carousel{
+    width: 60% !important;
+    margin: auto;
+    justify-content: center;
+  }
+  .containerStories{
+    width: 60% !important;
+  }
+  .headerTitle{
+    margin-top: 8rem !important;
+    margin-left: 8rem !important;
+  }
+}
+.carousel-container {
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+  overflow: hidden; /* Oculta cualquier contenido que desborde del contenedor */
+  max-height: 20rem;
+}
+
+
+
+.carousel-container img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+}
+
 .headerTitle{
   z-index: 1;
   font-family: 'Poppins', sans-serif;
@@ -129,7 +198,7 @@ a {
   justify-content: center;
   display: flex;
   font-family: 'Poppins', sans-serif;
-  width: 80%;
+  width: 100%;
 }
 .AboutUs{
   font-family: 'Poppins', sans-serif;

@@ -65,7 +65,7 @@
 }
 
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1200px) {
   .title{
     font-size: 3rem;
   }
@@ -80,11 +80,14 @@
   }
   .containerCoursesFlex{
     display: flex;
-    width: 80%;
+    width: 80% !important;
     margin: auto;
     justify-content: center;
   }
   .imgDimentionsForCourses{
-    width: 15rem !important;
+    width: 9rem !important;
+  }
+  .containerImgsWeb{
+    width: 25rem;
   }
 }
