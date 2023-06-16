@@ -1,0 +1,44 @@
+.font{
+  font-family: 'Poppins', sans-serif;
+}
+.titleContainer{
+  display: flex;
+  justify-content: start;
+  margin: auto;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  h3{
+    z-index: 1;
+    text-align: start;
+    @media screen and (max-width: 1000px){
+      font-size: 2rem;
+    }
+    font-size:  5rem;
+  }
+
+}
+
+.containerImg{
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  img{
+    width: 100%;
+  }
+}
+
+.containerText{
+  display: flex;
+  margin: auto ;
+  justify-content: center;
+  // color: white;
+  // background-color: rgb(255, 255, 255);
+  p{
+    margin-right: 4rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}

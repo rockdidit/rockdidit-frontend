@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderCoursesComponent } from './header-courses.component';
+import { IDidItComponent } from './i-did-it.component';
 
-describe('HeaderCoursesComponent', () => {
-  let component: HeaderCoursesComponent;
-  let fixture: ComponentFixture<HeaderCoursesComponent>;
+describe('IDidItComponent', () => {
+  let component: IDidItComponent;
+  let fixture: ComponentFixture<IDidItComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderCoursesComponent ]
+      declarations: [ IDidItComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeaderCoursesComponent);
+    fixture = TestBed.createComponent(IDidItComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
