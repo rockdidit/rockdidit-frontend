@@ -1,3 +1,5 @@
+$color: #c7e902;
+
 .font{
   font-family: 'Poppins', sans-serif;
 }
@@ -16,6 +18,37 @@
 
 }
 
+.containerOnlyRow{
+  span{
+    font-size: 15rem;
+    color: $color;
+    transform: rotate(-45deg);
+    margin-right: 10rem;
+    margin-top: -10rem;
+    margin-bottom: -24rem;
+  }
+  margin: auto;
+  justify-content: end;
+  display: flex;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@media screen and (min-width: 1000px) {
+  .containerText{
+    p{
+      margin-left: 20rem !important;
+      margin-right: 20rem !important;
+    }
+  }
+}
 
 .containerText{
   display: flex;

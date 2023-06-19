@@ -1,3 +1,5 @@
+$color: #c7e902;
+
 .font{
   font-family: 'Poppins', sans-serif;
 }
@@ -18,7 +20,69 @@
 
 }
 
+@media screen and (min-width: 1000px){
+  .containerEnrollComplete{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .containerEnroll{
+    width: 100rem;
+  }
+  .containerImg{
+    width: 150rem;
+  }
+  .contianerCuttingAndButton{
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+  .contianerFlexWeb{
+    display: flex;
+  }
+}
+
+.enrollNow{
+  display: flex;
+  margin: auto;
+  justify-content: start;
+  margin-left: 5rem;
+}
+
+
+.containerOnlyRow{
+  span{
+    font-size: 15rem;
+    color: $color;
+    transform: rotate(-45deg);
+    margin-right: 5rem;
+  }
+  margin-bottom: 10rem !important;
+  margin-top: 2rem !important;
+  margin: auto;
+  justify-content: end;
+  display: flex;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.containerButton{
+  display: flex;
+  justify-content: start;
+  margin: auto;
+  margin-left: 4rem;
+}
+
 .containerImg{
+
   margin-left: 4rem;
   margin-right: 4rem;
   display: flex;
