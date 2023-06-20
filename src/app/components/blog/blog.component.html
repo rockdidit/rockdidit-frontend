@@ -1,0 +1,62 @@
+<div class="fullComponent">
+  <div class="titleBox">
+    <h1 class="font">BLOG</h1>
+  </div>
+  <div class="containerWeb">
+    <div class="jumpForJoy">
+      <div>
+        <div class="textJump">
+          <h1 class="font">
+            Jump for Joy with <br />
+            This Leap Year <br />
+            HIIT Workout
+          </h1>
+        </div>
+        <div>
+          <div class="dateBlog">
+            <span> FEBRUARY 7, 2021 </span>
+          </div>
+        </div>
+        <div class="paragraphContainer">
+          <p>
+            This quick workout takes less than 20 minutes and can be done almost
+            anywhere. You’ve got two goals: Maximize your calorie burn, Train
+            your fitness for more intensity, High Intensity
+          </p>
+        </div>
+      </div>
+      <div class="imgJump">
+        <img
+          src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2013/04/large.jpg?w=968&ssl=1 968w, https://i0.wp.com/rockdidit.com/wp-content/uploads/2013/04/large.jpg?resize=630%2C855&ssl=1 630w, https://i0.wp.com/rockdidit.com/wp-content/uploads/2013/04/large.jpg?resize=221%2C300&ssl=1 221w, https://i0.wp.com/rockdidit.com/wp-content/uploads/2013/04/large.jpg?resize=754%2C1024&ssl=1 754w, https://i0.wp.com/rockdidit.com/wp-content/uploads/2013/04/large.jpg?resize=768%2C1043&ssl=1 768w"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let item of blogsArrs" class="containerDivCenter">
+    <div class="containerWebFlexBoxes">
+      <div class="boxBlogs">
+        <div class="titleBlog">
+          <h4>
+            {{ item.title }}
+          </h4>
+        </div>
+        <div class="dateBlog">
+          <span> {{ item.date }} </span>
+        </div>
+        <div class="pBlog">
+          <p>
+            {{ item.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="triangle-container">
+  <div class="triangle"></div>
+  <div class="followRock">
+    <span class="font followText"> FOLLOW </span>
+    <span class="font Rock"> #F7_LoveYourLife </span>
+  </div>
+</div>
