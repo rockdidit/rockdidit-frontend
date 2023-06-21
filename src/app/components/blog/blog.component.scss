@@ -4,7 +4,7 @@
     margin: auto;
     justify-content: center;
     background-color: #c6e802;
-    width: 100rem;
+    width: 90rem;
     height: 30rem;
   }
   .containerWeb {
@@ -23,6 +23,8 @@
     }
   }
   .containerWebFlexBoxes{
+    width: 80%;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -65,8 +67,8 @@
     display: none;
   }
   .boxBlogs{
-    width: 30rem !important;
-    height: 30rem !important;
+    width: 20rem !important;
+    height: 40rem !important;
   }
 }
 

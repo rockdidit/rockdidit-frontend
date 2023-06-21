@@ -33,25 +33,25 @@
       </div>
     </div>
   </div>
-  <div *ngFor="let item of blogsArrs" class="containerDivCenter">
-    <div class="containerWebFlexBoxes">
-      <div class="boxBlogs">
-        <div class="titleBlog">
-          <h4>
-            {{ item.title }}
-          </h4>
-        </div>
-        <div class="dateBlog">
-          <span> {{ item.date }} </span>
-        </div>
-        <div class="pBlog">
-          <p>
-            {{ item.text }}
-          </p>
+  <div class="containerWebFlexBoxes">
+    <div *ngFor="let item of blogsArrs" class="containerDivCenter">
+        <div class="boxBlogs">
+          <div class="titleBlog">
+            <h4>
+              {{ item.title }}
+            </h4>
+          </div>
+          <div class="dateBlog">
+            <span> {{ item.date }} </span>
+          </div>
+          <div class="pBlog">
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
 <div class="triangle-container">
   <div class="triangle"></div>
