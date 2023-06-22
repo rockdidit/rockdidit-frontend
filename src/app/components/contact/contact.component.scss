@@ -54,28 +54,34 @@ textarea {
   height: 12.5rem; /* Set the desired height value */
 }
 
-  @media screen and (min-width: 1000px){
-    .containerImg{
-      margin-right: 15%;
-    }
-    .contianerButton{
-      margin-left: 22rem !important;
-    }
-    .containerTitleForm{
-      width: 50%;
-    }
-    .containerForm{
-      width: 50% !important;
-    }
-    .imgRow{
-      width: 20rem !important;
-    }
-    .containerMargins{
-      display: flex;
-      justify-content: center;
-      margin: auto;
-    }
+@media screen and (max-width: 1000px) {
+  .containerDisplay {
+    margin-top: 0rem;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .containerImg {
+    margin-right: 15%;
+  }
+  .contianerButton {
+    margin-left: 22rem !important;
+  }
+  .containerTitleForm {
+    width: 50%;
+  }
+  .containerForm {
+    width: 50% !important;
+  }
+  .imgRow {
+    width: 20rem !important;
+  }
+  .containerMargins {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
 
 .containerForm {
   width: 90%;
@@ -85,7 +91,7 @@ textarea {
   }
 }
 
-.labelSend{
+.labelSend {
   cursor: pointer;
   color: white;
   margin-top: 0.3rem;
@@ -108,12 +114,11 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-.contianerButton{
+.contianerButton {
   margin: auto;
   justify-content: start;
-  width: 90%;
   display: flex;
-  img{
+  img {
     margin-top: 1;
     width: 2rem;
   }
