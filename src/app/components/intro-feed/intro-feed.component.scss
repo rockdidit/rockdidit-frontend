@@ -6,7 +6,14 @@
   .equipment{
     width: 60% !important;
   }
-
+  .icon-thick{
+    img{
+      z-index: -1;
+      position: absolute;
+      margin-top: -25rem !important;
+      width: 28rem !important;
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -57,11 +64,14 @@
 
 
 .icon-thick{
-  font-weight: 900;
-  font-size: 12rem;
-  z-index: -1;
-  position:absolute;
-  margin-top: -11rem;
+  // font-weight: 900;
+  // font-size: 12rem;
+  img{
+    z-index: -1;
+    position: relative;
+    margin-top: -11rem;
+    width: 12rem;
+  }
 }
 
 

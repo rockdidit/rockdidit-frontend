@@ -10,6 +10,18 @@
   .freeTextWeb{
     display: none !important;
   }
+
+  .bookNowContainer{
+    display: flex !important;
+    justify-content: end !important;
+    margin: auto !important;
+    margin-left: 8rem !important;
+    // width: 50%;
+    span{
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+  }
 }
 
 .buttonContainer {
@@ -93,8 +105,6 @@
 
   .bookNowContainer{
     margin-top: 18rem !important;
-    // margin-right: 1rem !important;
-    margin-left: -4rem !important;
   }
   .vertical-line {
     width: 1px;
@@ -173,10 +183,11 @@
   .registerForFreeBook{
     background-color: #c7e902;
     width: 20rem;
+
   }
 }
 .bookNowText{
-  padding-top: 0.2rem;
+  padding-top: 0rem;
 }
 
 .freeBook{
@@ -195,16 +206,8 @@
   display: flex;
 }
 
-.bookNowContainer{
-  display: flex;
-  justify-content: end;
-  margin: auto;
-  margin-right: 1rem !important;
-}
-
 .bookNowIcon{
-  font-size: 2rem;
-  font-weight: 900;
+  width: 2rem;
 }
 
 .centerContentEvent{
@@ -227,7 +230,9 @@
   position: relative;
 }
 
-
+.icon{
+  width: 10rem;
+}
 
 .icon-span {
   position: absolute;
@@ -241,8 +246,6 @@
   margin-right: 3rem;
   font-weight: 900;
   font-size: 10rem;
-  display: inline-block !important;
-  transform: rotate(315deg) !important;
 }
 
 .font{
@@ -256,6 +259,15 @@
 
 
 @media screen and (max-width: 1000px) {
+
+  .boxTitle{
+    justify-content: start;
+    display: flex;
+    margin: auto;
+    margin-left: 2rem;
+    margin-top: -2rem;
+
+  }
   .containerEvent{
     display: flex;
   }

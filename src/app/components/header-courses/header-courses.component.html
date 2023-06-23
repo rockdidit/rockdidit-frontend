@@ -15,23 +15,21 @@
           <img class="imgDimentionsForCourses" [src]="item.img" alt="" />
         </div>
         <div class="subtitleDiv">
-          <h2 class="subTitleCourses">
-            {{ item.title1 }} <br />
-            {{ item.title2 }}
-          </h2>
-          <div class="marginForRight">
-            <span style="font-size: 3rem" class="material-symbols-outlined">
-              arrow_forward_ios
-            </span>
+          <div class="coursesTitles">
+            <h2 class="subTitleCourses">
+              {{ item.title1 }} <br />
+              {{ item.title2 }}
+            </h2>
+            <div class="marginForRight">
+              <img src="../../../assets/icons/rightRow.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
     </ng-container>
   </div>
   <div class="d-flex marginAutoViewAll">
-    <span style="font-size: 3rem" class="material-symbols-outlined">
-      arrow_forward_ios
-    </span>
+    <img src="../../../assets/icons/rightRow.svg" alt="">
     <h2 class="viewAll">View All</h2>
   </div>
 </div>

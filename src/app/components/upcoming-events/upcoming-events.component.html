@@ -1,12 +1,14 @@
 <div>
   <div class="titleContainer">
     <div class="icon-span">
-      <span class="material-symbols-outlined icon">arrow_forward_ios</span>
+      <img class="icon" src="../../../assets/icons/row45.svg" alt="" />
     </div>
-    <h1 class="titleText">
-      UPCOMING <br />
-      EVENTS
-    </h1>
+    <div class="boxTitle">
+      <h1 class="titleText">
+        UPCOMING <br />
+        EVENTS
+      </h1>
+    </div>
   </div>
   <ng-container class="boxFlex" *ngFor="let i of events">
     <div class="centerContainer">
@@ -31,10 +33,12 @@
             </p>
           </div>
           <div class="bookNowContainer mt-4">
-            <span class="material-symbols-outlined bookNowIcon"
-              >arrow_forward_ios</span
-            >
-            <h4 class="font bookNowText">BOOK NOW</h4>
+            <img
+              class="bookNowIcon"
+              src="../../../assets/icons/rowRigthBlack.svg"
+              alt=""
+            />
+            <span class="font bookNowText">BOOK NOW</span>
           </div>
         </div>
       </div>
@@ -58,12 +62,11 @@
     <div class="inputsContainer">
       <div>
         <h4 class="font freeTextWeb">
-          GET 2 CHAPTERS
-          FREE <br>
+          GET 2 CHAPTERS FREE <br />
           SIGN UP NOW
         </h4>
       </div>
-      <div >
+      <div>
         <div class="row">
           <div class="col-lg">
             <div class="form-floating mb-3 mt-3">
@@ -89,7 +92,10 @@
           </div>
           <div class="col-lg">
             <div class="centerButton mb-5">
-              <button class="btn registerForFreeBook" type="button">Button</button>
+              <button class="btn registerForFreeBook" type="button">
+                  <img class="bookNowIcon" src="../../../assets/icons/rowRigthBlack.svg" alt="">
+                  <span class="font bookNowText">GET E-BOOK</span>
+              </button>
             </div>
           </div>
         </div>
@@ -104,19 +110,19 @@
       </div>
     </div>
   </div>
-    <div class="containerCarousel">
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <ng-container *ngFor="let item of imgCarousel; let i = index">
-            <div class="carousel-item active" [class.active]="i === 0">
-              <img [src]="item.img" class="d-block w-100" alt="..." />
-            </div>
-          </ng-container>
-        </div>
+  <div class="containerCarousel">
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <ng-container *ngFor="let item of imgCarousel; let i = index">
+          <div class="carousel-item active" [class.active]="i === 0">
+            <img [src]="item.img" class="d-block w-100" alt="..." />
+          </div>
+        </ng-container>
       </div>
     </div>
+  </div>
 </div>

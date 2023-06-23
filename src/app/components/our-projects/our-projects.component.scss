@@ -37,7 +37,11 @@
   background-color: black;
   // height: 1rem;
   width: 100%;
+  height: 105rem;
 }
+
+
+
 .title{
   margin-top: 4rem !important;
   color: white;
@@ -86,6 +90,12 @@ h1{
 }
 
 @media screen and (max-width: 1000px) {
+  .title{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
   .containerimg img{
     max-width: 110%;
     height: 15rem;
@@ -105,11 +115,16 @@ h1{
   font-weight: 900;
 }
 .projectsTitle{
+  img{
+    margin-top: -1rem;
+    width: 2rem;
+    margin-left: 2rem;
+  }
   color: white;
   margin: auto;
   justify-content: start;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-top: 5rem;
   display: flex;
 }
 
