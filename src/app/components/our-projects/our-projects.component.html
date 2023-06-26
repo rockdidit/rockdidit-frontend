@@ -8,7 +8,7 @@
     </div>
     <div class="boxWeb">
       <ng-container *ngFor="let i of projects">
-        <div>
+        <div class="boxOutProjects">
           <div class="containerimg">
             <img class="allImgDiv" [src]="i.img" alt="" />
           </div>
@@ -23,9 +23,9 @@
             </div>
           </div>
           <div class="fontPoppins projectsTitle">
-            <H3>
+            <h3>
               {{ i.title }}
-            </H3>
+            </h3>
             <img src="../../../assets/icons/rightRow.svg" alt="">
           </div>
         </div>

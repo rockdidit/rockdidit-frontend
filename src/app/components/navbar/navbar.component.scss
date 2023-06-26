@@ -48,6 +48,9 @@
   }
 
   .containerWeb {
+    img{
+      width: 2rem;
+    }
     display: flex;
     justify-content: center;
     margin: auto;
@@ -85,3 +88,5 @@
     display: flex;
   }
 }
+
+

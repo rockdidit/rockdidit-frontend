@@ -32,12 +32,42 @@
   }
 }
 
+.boxWeb{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+
+.allImgDiv {
+  contain: content;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  .imgDimentionsForCourses {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20rem !important;
+    transition: transform 0.3s;
+    transform: scale(1.9);
+    max-width: 12rem !important;
+    max-height: 20rem !important;
+  }
+  .imgDimentionsForCourses:hover {
+    transform: scale(2.4);
+  }
+}
 
 .containerWeb{
   background-color: black;
   // height: 1rem;
   width: 100%;
-  height: 105rem;
+  padding-bottom: 5rem;
 }
 
 
@@ -59,20 +89,38 @@ h1{
 }
 .priceImg{
   background-color: #c7e902 ;
-  width: 80%;
-  height: 2rem;
+  width: 20rem;
+  transition: transform 0.5s ease-in-out;
   margin: auto;
   justify-content: start;
   display: flex;
+
 }
+
+.boxOutProjects{
+  &:hover{
+    .priceImg{
+      transform: scaleY(1);
+    }
+  }
+
+  &:not(:hover){
+    .priceImg{
+      transform: scaleY(0);
+    }
+  }
+
+}
+
+
+
 .containerimg{
-  margin-top: 5rem !important;
-  width: 80%;
-  margin: auto;
-  justify-content: center;
+  contain: content;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  width: 20rem;
+  height: 30rem;
   display: flex;
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
 }
 
 .textFont{
@@ -116,9 +164,12 @@ h1{
 }
 .projectsTitle{
   img{
-    margin-top: -1rem;
+    margin-top: -3rem;
     width: 2rem;
     margin-left: 2rem;
+  }
+  h3{
+    margin-top: -2rem;
   }
   color: white;
   margin: auto;

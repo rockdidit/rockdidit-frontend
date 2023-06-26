@@ -163,7 +163,63 @@ a {
   height: 3rem;
 }
 
+.feedImg{
+  transition: filter 0.5s ease-in-out;
+}
+
+.feedImg:hover{
+  filter: brightness(0.8);
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.headerTitle{
+  .icon-thick{
+    img{
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
+
+.headerTitle:hover{
+  .icon-thick{
+    img{
+      animation: moveRight 0.5s ease-in-out forwards;
+    }
+  }
+}
+
+.headerTitle:not(:hover){
+  .icon-thick{
+    img{
+      animation: moveBack 0.5s ease-in-out forwards;
+
+    }
+  }
+}
+
 @media screen and (min-width: 1000px) {
+  .centerDiv{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+  }
   .covidContainer{
     width: 60% !important;
   }
