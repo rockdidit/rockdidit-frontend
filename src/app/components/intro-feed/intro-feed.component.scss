@@ -113,10 +113,14 @@
   margin: auto;
   justify-content: center;
   display: flex;
-  width: 80%;
+  width:60%;
   background-color: #C7E902;
   text-align: center;
   margin-top: 4rem !important;
+}
+
+.imgRowForSelects{
+  width: 2rem;
 }
 
 a {
@@ -215,6 +219,7 @@ a {
 }
 
 @media screen and (min-width: 1000px) {
+
   .centerDiv{
     margin: auto;
     justify-content: center;

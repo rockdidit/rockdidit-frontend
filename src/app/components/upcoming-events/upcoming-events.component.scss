@@ -1,28 +1,97 @@
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .vertical-line {
     display: none !important;
   }
-  .containerEvent{
-    div{
+  .containerEvent {
+    div {
       display: block !important;
     }
   }
-  .freeTextWeb{
+  .freeTextWeb {
     display: none !important;
   }
 
-  .bookNowContainer{
+  .bookNowContainer {
     display: flex !important;
     justify-content: end !important;
     margin: auto !important;
     margin-left: 8rem !important;
     // width: 50%;
-    span{
-      margin-left: 1rem;
+    span {
+      // margin-left: 1rem;
       font-size: 1rem;
     }
   }
 }
+
+// .selectors {
+//   display: flex;
+//   justify-content: center;
+//   margin: auto;
+//   li:hover,
+//   li:active{
+//     text-decoration: underline;
+//   }
+//   li{
+//     cursor: pointer;
+//     font-family: "Poppins", sans-serif;
+//   }
+
+//   span:hover,
+//   span:active {
+//     text-decoration: underline;
+//   }
+
+//   span {
+//     cursor: pointer;
+//     margin-left: 3rem;
+//     margin-right: 3rem;
+//     font-family: "Poppins", sans-serif;
+//   }
+// }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.titleContainer{
+  .icon-span{
+    img{
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
+
+.titleContainer:hover{
+  .icon-span{
+    img{
+      animation: moveRight 0.5s ease-in-out forwards;
+    }
+  }
+}
+
+.titleContainer:not(:hover){
+  .icon-span{
+    img{
+      animation: moveBack 0.5s ease-in-out forwards;
+    }
+  }
+}
+
 
 .buttonContainer {
   display: flex;
@@ -31,43 +100,39 @@
   align-items: center;
 }
 
-
 @media screen and (min-width: 1000px) {
-  .freeText{
+  .freeText {
     display: none !important;
   }
-  .freeTextWeb{
+  .freeTextWeb {
     margin: auto;
     justify-content: center;
     display: flex;
     margin-top: 3rem !important;
     font-size: 4rem;
   }
-  .centerButton{
+  .centerButton {
     margin: auto !important;
     margin-top: 1.5rem !important;
     justify-content: center !important;
     align-items: center !important;
     display: flex !important;
   }
-  .boxFlexForElements{
+  .boxFlexForElements {
     display: flex !important;
   }
-  .formFlexBox{
+  .formFlexBox {
     display: flex;
   }
-  .inputsContainer{
+  .inputsContainer {
     width: 50rem !important;
     // width: 20rem;
     // margin: auto;
     // justify-content: center;
     display: flex;
   }
-  .titleText{
+  .titleText {
     font-size: 10rem !important;
-  }
-  .icon{
-    font-size: 20rem !important;
   }
   .icon-span {
     position: absolute;
@@ -75,26 +140,26 @@
     right: 3;
     margin-right: 4rem;
   }
-  .displayWeb{
+  .displayWeb {
     display: none !important;
   }
 
-  .EventTitleGoesHere{
+  .EventTitleGoesHere {
     display: block !important;
     width: 40rem !important;
     font-size: 1.5rem !important;
   }
 
-  .textCenterEvent{
+  .textCenterEvent {
     justify-content: start !important;
     font-size: 3rem;
   }
 
-  .loremIpsum{
+  .loremIpsum {
     text-align: start !important;
   }
 
-  .eventDate{
+  .eventDate {
     font-size: 4rem !important;
     margin: auto !important;
     align-items: center !important;
@@ -103,7 +168,7 @@
     margin-left: 3rem !important;
   }
 
-  .bookNowContainer{
+  .bookNowContainer {
     margin-top: 18rem !important;
   }
   .vertical-line {
@@ -112,27 +177,21 @@
     border-left: 1px solid black;
   }
 
-  .centerContentEvent{
+  .centerContentEvent {
     display: block !important;
   }
-
 }
-
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 900,
-  'GRAD' 200,
-  'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 900, "GRAD" 200, "opsz" 48;
 }
 
-.eventDate{
+.eventDate {
   font-size: 2rem;
   margin-top: 2rem;
 }
 
-.containerEvent{
+.containerEvent {
   margin: auto;
   justify-content: center;
   display: flex;
@@ -141,13 +200,12 @@
   width: 80%;
 }
 
-.centerContainer{
+.centerContainer {
   justify-content: center;
   margin: auto;
   display: flex;
-
 }
-.containerCarousel{
+.containerCarousel {
   width: 50%;
   max-width: 50%;
   justify-content: center;
@@ -156,67 +214,82 @@
   margin-top: 5rem;
 }
 
-.inputsContainer{
+.inputsContainer {
   width: 20rem;
   margin: auto;
   justify-content: center;
   display: block;
 }
 
-.textCenterEvent{
+.textCenterEvent {
   margin: auto;
   justify-content: center;
   display: flex;
 }
 
-.bookConditionContainer{
+.bookConditionContainer {
   display: flex;
   justify-content: center;
   display: flex;
   text-align: center;
 }
 
-.centerButton{
+.centerButton {
   display: flex;
   justify-content: center;
   margin: auto;
-  .registerForFreeBook{
+  .registerForFreeBook {
     background-color: #c7e902;
     width: 20rem;
-
   }
 }
-.bookNowText{
+.bookNowText {
   padding-top: 0rem;
 }
 
-.freeBook{
+.freeBook {
   width: 15rem;
 }
-.freeText{
+.freeText {
   margin: auto;
   justify-content: center;
   display: flex;
   margin-top: 3rem !important;
 }
 
-.containerBook{
+.containerBook {
   margin: auto;
   justify-content: center;
   display: flex;
 }
 
-.bookNowIcon{
+@media screen and (min-width: 1000px) {
+  .icon {
+    width: 30rem;
+    margin-right: 3rem;
+    font-weight: 900;
+    font-size: 10rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .icon {
+    width: 10rem;
+    margin-right: 2rem;
+  }
+}
+
+.bookNowIcon {
   width: 2rem;
 }
 
-.centerContentEvent{
+.centerContentEvent {
   margin: auto;
   justify-content: center;
   // display: flex;
 }
 
-.centerTitle{
+.centerTitle {
   justify-content: center;
   display: flex;
   margin: auto;
@@ -230,10 +303,6 @@
   position: relative;
 }
 
-.icon{
-  width: 10rem;
-}
-
 .icon-span {
   position: absolute;
   top: -8rem;
@@ -242,14 +311,8 @@
   z-index: -1;
 }
 
-.icon {
-  margin-right: 3rem;
-  font-weight: 900;
-  font-size: 10rem;
-}
-
-.font{
-  font-family: 'Poppins', sans-serif;
+.font {
+  font-family: "Poppins", sans-serif;
 }
 
 .titleText {
@@ -257,18 +320,15 @@
   font-weight: 900;
 }
 
-
 @media screen and (max-width: 1000px) {
-
-  .boxTitle{
+  .boxTitle {
     justify-content: start;
     display: flex;
     margin: auto;
     margin-left: 2rem;
     margin-top: -2rem;
-
   }
-  .containerEvent{
+  .containerEvent {
     display: flex;
   }
 }
