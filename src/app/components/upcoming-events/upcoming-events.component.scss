@@ -24,31 +24,19 @@
   }
 }
 
-// .selectors {
-//   display: flex;
-//   justify-content: center;
-//   margin: auto;
-//   li:hover,
-//   li:active{
-//     text-decoration: underline;
-//   }
-//   li{
-//     cursor: pointer;
-//     font-family: "Poppins", sans-serif;
-//   }
 
-//   span:hover,
-//   span:active {
-//     text-decoration: underline;
-//   }
+.selectors{
+  cursor: pointer;
 
-//   span {
-//     cursor: pointer;
-//     margin-left: 3rem;
-//     margin-right: 3rem;
-//     font-family: "Poppins", sans-serif;
-//   }
-// }
+  span:hover,
+  span:active {
+    text-decoration: underline;
+  }
+  span {
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+  }
+}
 
 @keyframes moveRight {
   0% {
@@ -68,30 +56,29 @@
   }
 }
 
-.titleContainer{
-  .icon-span{
-    img{
+.titleContainer {
+  .icon-span {
+    img {
       transition: transform 0.5s ease-in-out;
     }
   }
 }
 
-.titleContainer:hover{
-  .icon-span{
-    img{
+.titleContainer:hover {
+  .icon-span {
+    img {
       animation: moveRight 0.5s ease-in-out forwards;
     }
   }
 }
 
-.titleContainer:not(:hover){
-  .icon-span{
-    img{
+.titleContainer:not(:hover) {
+  .icon-span {
+    img {
       animation: moveBack 0.5s ease-in-out forwards;
     }
   }
 }
-
 
 .buttonContainer {
   display: flex;

@@ -32,6 +32,19 @@
   }
 }
 
+.selectors{
+  cursor: pointer;
+
+  span:hover,
+  span:active {
+    text-decoration: underline;
+  }
+  span {
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
 .inputsContainer {
   margin: auto;
   display: flex;
@@ -98,6 +111,13 @@
 }
 
 .buttonSend {
+  span{
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+  img{
+    width: 3rem;
+  }
   margin: auto;
   margin-right: 1rem;
   justify-content: end;
