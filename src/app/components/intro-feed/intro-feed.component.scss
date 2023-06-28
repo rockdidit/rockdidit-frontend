@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1450px) {
   .fatherMobile{
     display: none;
   }
@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1450px) {
   .fatherWeb{
     display: none;
   }
@@ -145,15 +145,15 @@ a {
 
 #containerImg2{
   margin-top: -10rem;
-  margin-left: -15rem;
+  margin-left: 0rem;
   margin-right: 10rem;
+  @media screen and (min-width: 900px){
+    margin-top: 0;
+  }
 }
 
 #containerImg3{
   margin-left: -5rem;
-  // margin-top: -10rem;
-  // margin-left: 30rem;
-  // margin-left: -5rem;
 }
 .row{
   width: 100%;
@@ -219,7 +219,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1450px) {
 
   .centerDiv{
     margin: auto;
