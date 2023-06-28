@@ -275,6 +275,11 @@ a {
 .AboutUs{
   font-family: 'Poppins', sans-serif;
   margin-top: 0.7rem;
+  &:hover,
+  &:active{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .introImgs{

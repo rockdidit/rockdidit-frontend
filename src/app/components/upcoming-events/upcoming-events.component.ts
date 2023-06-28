@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-events.component.scss'],
 })
 export class UpcomingEventsComponent {
+
+
   events: any[] = [
     {
       date: '14 SEP.',

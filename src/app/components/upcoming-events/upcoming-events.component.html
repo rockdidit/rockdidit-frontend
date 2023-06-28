@@ -93,8 +93,12 @@
           <div class="col-lg">
             <div class="centerButton mb-5">
               <button class="btn registerForFreeBook" type="button">
-                  <img class="bookNowIcon" src="../../../assets/icons/rowRigthBlack.svg" alt="">
-                  <span class="font bookNowText">GET E-BOOK</span>
+                <img
+                  class="bookNowIcon"
+                  src="../../../assets/icons/rowRigthBlack.svg"
+                  alt=""
+                />
+                <span class="font bookNowText">GET E-BOOK</span>
               </button>
             </div>
           </div>
@@ -110,7 +114,20 @@
       </div>
     </div>
   </div>
-  <div class="containerCarousel">
+
+  <swiper-container class="swiperContainerWeb" slides-per-view="4" speed="500" [loop]="true" >
+    <swiper-slide *ngFor="let item of imgCarousel">
+      <img [src]="item.img" alt="" />
+    </swiper-slide>
+  </swiper-container>
+  <div class="containerWidthSwiper">
+    <swiper-container class="swiperMobile" slides-per-view="1" speed="500" [loop]="true" >
+      <swiper-slide *ngFor="let item of imgCarousel">
+        <img [src]="item.img" alt="" />
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <!-- <div class="containerCarousel">
     <div
       id="carouselExampleSlidesOnly"
       class="carousel slide"
@@ -124,5 +141,5 @@
         </ng-container>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

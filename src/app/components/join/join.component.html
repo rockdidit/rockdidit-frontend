@@ -10,11 +10,11 @@
   </div>
   <div class="containerOffers">
     <div class="boxFlexForPass">
-      <div class="divOffer">
+      <div class="divOffer" [class.selected]="offerSelected[0]" (click)="selectOffer(0)">
         <div class="centerContainerDimension">
           <div class="dimensionContainer">
             <label class="radio-inline"
-              ><input type="radio" name="optradio" checked
+              ><input class="black-radio" [checked]="offerSelected[0]" type="radio" name="optradio" checked
             /></label>
             <h1 class="font joinTitle">ONE DAY PASS</h1>
             <p class="font subTitleJoin joinTitle">$15/PER DAY</p>
@@ -26,11 +26,11 @@
           </div>
         </div>
       </div>
-      <div class="divOffer">
+      <div class="divOffer" [class.selected]="offerSelected[1]" (click)="selectOffer(1)">
         <div class="centerContainerDimension">
           <div class="dimensionContainer">
             <label class="radio-inline"
-              ><input type="radio" name="optradio" checked
+              ><input class="black-radio" [checked]="offerSelected[1]" type="radio" name="optradio" checked
             /></label>
             <h1 class="font joinTitle">MONTHLY PASS</h1>
             <p class="font subTitleJoin joinTitle">$90/PER MONTH</p>
@@ -42,11 +42,11 @@
           </div>
         </div>
       </div>
-      <div class="divOffer">
+      <div class="divOffer" [class.selected]="offerSelected[2]" (click)="selectOffer(2)">
         <div class="centerContainerDimension">
           <div class="dimensionContainer">
             <label class="radio-inline"
-              ><input type="radio" name="optradio" checked
+              ><input class="black-radio" [checked]="offerSelected[2]" type="radio" name="optradio" checked
             /></label>
             <h1 class="font joinTitle">YEARLY PASS</h1>
             <p class="font subTitleJoin joinTitle">$59/PER MONTH</p>

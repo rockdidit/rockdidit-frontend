@@ -22,10 +22,36 @@
       font-size: 1rem;
     }
   }
+  .swiperContainerWeb {
+    display: none;
+  }
+  .containerWidthSwiper {
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+  }
+  .swiperMobile {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    swiper-slide {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      img{
+        margin: auto;
+      display: flex;
+      justify-content: center;
+      }
+    }
+  }
+  // .swiperMobile{
+  //   display: none;
+  // }
 }
 
-
-.selectors{
+.selectors {
   cursor: pointer;
 
   span:hover,
@@ -88,6 +114,12 @@
 }
 
 @media screen and (min-width: 1000px) {
+  .swiperContainerWeb {
+    width: 60% !important;
+  }
+  .swiperMobile {
+    display: none !important;
+  }
   .freeText {
     display: none !important;
   }
