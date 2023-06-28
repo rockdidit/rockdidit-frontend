@@ -116,6 +116,12 @@
   display: flex;
 }
 
+
+.displayElements{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
 .socialIcons {
   margin-top: 5rem;
   svg {
