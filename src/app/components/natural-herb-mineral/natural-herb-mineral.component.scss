@@ -1,125 +1,172 @@
 $color: #c7e902;
 
-.font{
-  font-family: 'Poppins', sans-serif;
+.font {
+  font-family: "Poppins", sans-serif;
 }
-.titleContainer{
+.titleContainer {
   display: flex;
   justify-content: start;
   margin: auto;
-  margin-top: 5rem;
-  margin-left: 5rem;
-  h3{
+  h3 {
     margin-top: 5rem;
     color: white;
     z-index: 1;
     text-align: start;
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1600px) {
       font-size: 2rem;
     }
-    font-size:  5rem;
+    font-size: 5rem;
   }
 }
 
-.containerOnlyRow{
-  span{
-    font-size: 15rem;
-    color: $color;
-    transform: rotate(-45deg);
-    margin-right: 5rem;
-    margin-bottom: -12.8rem;
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.containerOnlyRow:hover {
+  img {
+    animation: moveRight 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow:not(:hover) {
+  img {
+    animation: moveBack 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow {
+  img {
+    transition: transform 0.5s ease-in-out;
+  }
+  img {
+    width: 15rem;
+    margin-right: 4rem !important;
+    position: absolute;
+    z-index: 1;
+    margin-top: -26.7rem;
+    @media screen and (max-width: 1600px) {
+      margin-top: -5.2rem;
+    }
+    @media screen and (min-width: 1702px) {
+      margin-top: -26rem;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 8rem;
+      margin-top: -2.75rem;
+      margin-right: -5rem !important;
+    }
   }
   margin: auto;
   justify-content: end;
   display: flex;
 }
 
-.containerButton{
+.containerButton {
   display: flex;
   justify-content: start;
   margin: auto;
-  margin-left: 4rem;
 }
 
-@media screen and (max-width: 1000px) {
-  .displayNoneMobile{
+@media screen and (max-width: 1600px) {
+  .displayNoneMobile {
     display: none;
+  }
+  .containerOnlyRow {
+    width: 4rem !important;
+
+  }
+  .containerImg{
+    padding-bottom: 5rem;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .titleContainerWeb{
+@media screen and (min-width: 1600px) {
+  .titleContainerWeb {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     margin: auto;
-    margin-left: 20rem;
-    h3{
+    margin-right: 10rem;
+    h3 {
       margin-top: 5rem;
       color: white;
       z-index: 1;
       text-align: start;
-      font-size:  3rem;
-
+      font-size: 3rem;
     }
   }
-  .containerButton{
+  .containerButton {
     margin-left: 20rem;
     margin-right: 20rem;
   }
-  .containerText{
-    p {
-      margin-left: 20rem !important;
-      margin-right: 20rem !important;
-    }
+  .containerText {
+    width: 25rem;
   }
-  .titleContainer{
+  .titleContainer {
     display: none;
   }
-  .containerWeb{
+  .containerWeb {
     display: flex;
     flex-direction: row-reverse;
+    // margin-top: 10rem;
   }
-  .containerImg{
+  .containerImg {
     margin-left: -4rem;
     margin-right: -4rem;
   }
 }
 
-.containerWeb{
+.containerDisplay {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.containerBackGround {
+  z-index: -2 !important;
   background-color: black;
-  width: 100%;
+  margin-top: 10rem;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 900,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 900, "GRAD" 0, "opsz" 48;
 }
 
-.containerImg{
+.containerImg {
   margin-left: 4rem;
   margin-right: 4rem;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
-  img{
-    width: 100%;
-    margin-bottom: 4rem;
+  contain: content;
+  align-items: center;
+  img {
+    width:70%;
+    height: 50%;
+    // margin-bottom: 4rem;
   }
 }
 
-.containerText{
+.containerText {
   display: flex;
-  margin: auto ;
+  margin: auto;
   justify-content: center;
-
-  // color: white;
-  // background-color: rgb(255, 255, 255);
-  p{
-    margin-right: 4rem;
-    margin-left: 4rem;
+  p {
     margin-top: 2rem;
     margin-bottom: 5rem;
     color: white;

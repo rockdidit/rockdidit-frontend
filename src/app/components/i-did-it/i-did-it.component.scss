@@ -10,7 +10,7 @@
   h3 {
     z-index: 1;
     text-align: start;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1400px) {
       font-size: 2rem;
     }
     font-size: 5rem;
@@ -24,30 +24,40 @@
   justify-content: center;
   margin-top: 4rem;
   img {
-    width: 100%;
+    width: 80%;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .containerImg{
+@media screen and (min-width: 1400px) {
+  .boxComponent {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 75%;
+  }
+  .containerImg {
+    img {
+      height: 20rem;
+      width: 20rem;
+    }
+  }
+  .containerImg {
     margin-left: -4rem;
     margin-right: 10rem;
     margin-top: -4rem;
   }
-  .containerFlexWeb{
-
+  .containerFlexWeb {
     display: flex;
     margin: auto;
     justify-content: center;
-
   }
   .titleContainer {
-    margin-left: 20rem;
+    // margin-left: 20rem;
     margin-right: 20rem;
   }
   .containerText {
     p {
-      margin-left: 20rem !important;
+      // margin-left: 20rem !important;
       margin-right: 20rem !important;
     }
   }
@@ -57,8 +67,6 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  // color: white;
-  // background-color: rgb(255, 255, 255);
   p {
     margin-right: 4rem;
     margin-left: 4rem;
