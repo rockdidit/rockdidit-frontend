@@ -6,7 +6,26 @@
     background-color: #c6e802;
     width: 90rem;
     height: 30rem;
+    cursor: pointer;
+    overflow: hidden;
   }
+
+  .jumpForJoy:hover .imgJump img {
+    transform: scale(1.2); /* Aplicar un zoom de 1.2 a la imagen cuando se pase el mouse por encima */
+    transition: transform 1s; /* Duración de la transición de zoom de 1 segundo */
+  }
+  .jumpForJoy .imgJump img {
+    transition: transform 1s; /* Aplicar la transición de zoom de 1 segundo en el estado normal */
+  }
+
+  .jumpForJoy:hover h1 {
+    text-decoration: underline; /* Subrayar el texto cuando se pase el mouse por encima */
+    transition: text-decoration 1s; /* Duración de la transición de opacidad de 1 segundo */
+  }
+  .jumpForJoy h1 {
+    transition: text-decoration 1s; /* Aplicar la transición de subrayado y opacidad de 1 segundo en el estado normal */
+  }
+
   .containerWeb {
     display: flex;
     justify-content: center;
