@@ -4,7 +4,7 @@
 
   .logo {
     width: 10rem;
-    height: 4rem;
+    // height: 4rem;
   }
 }
 
@@ -25,6 +25,11 @@
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+.carShop{
+  cursor: pointer;
+  width: 2rem !important;
 }
 
 @media screen and (max-width: 1000px) {
@@ -55,6 +60,7 @@
     justify-content: center;
     margin: auto;
   }
+
 
   .selectors {
     display: flex;
@@ -88,3 +94,5 @@
     display: flex;
   }
 }
+
+
