@@ -1,0 +1,222 @@
+<div class="containerWeb">
+  <div class="iconContainer">
+    <img src="../../../../assets/icons/7.1 Muñeco.svg" class="iconPerson" />
+  </div>
+  <div class="titleContainer">
+    <h1 class="font titleJoin">
+      JOIN <br />
+      TODAY
+    </h1>
+  </div>
+  <div class="containerOffers">
+    <div class="boxFlexForPass">
+      <div
+        class="divOffer"
+        [class.selected]="offerSelected[0]"
+        (click)="selectOffer(0)"
+      >
+        <div class="centerContainerDimension">
+          <div class="dimensionContainer">
+            <label class="radio-inline"
+              ><input
+                class="black-radio"
+                [checked]="offerSelected[0]"
+                type="radio"
+                name="optradio"
+                checked
+            /></label>
+            <h1 class="font joinTitle">ONE DAY PASS</h1>
+            <p class="font subTitleJoin joinTitle">$15/PER DAY</p>
+            <p class="text-center">
+              Whether you’re visiting F7 on business or are just taking your
+              personal fitness one day at a time, we’d like to invite you to
+              experience all that F7 has to offer. You are always Welcome!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="divOffer"
+        [class.selected]="offerSelected[1]"
+        (click)="selectOffer(1)"
+      >
+        <div class="centerContainerDimension">
+          <div class="dimensionContainer">
+            <label class="radio-inline"
+              ><input
+                class="black-radio"
+                [checked]="offerSelected[1]"
+                type="radio"
+                name="optradio"
+                checked
+            /></label>
+            <h1 class="font joinTitle">MONTHLY PASS</h1>
+            <p class="font subTitleJoin joinTitle">$90/PER MONTH</p>
+            <p class="text-center">
+              Our monthly membership helps you to keep your fitness goals on
+              track without a commitment of any kind, while still enjoying all
+              of the amenities that F7 has to offer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="divOffer"
+        [class.selected]="offerSelected[2]"
+        (click)="selectOffer(2)"
+      >
+        <div class="centerContainerDimension">
+          <div class="dimensionContainer">
+            <label class="radio-inline"
+              ><input
+                class="black-radio"
+                [checked]="offerSelected[2]"
+                type="radio"
+                name="optradio"
+                checked
+            /></label>
+            <h1 class="font joinTitle">YEARLY PASS</h1>
+            <p class="font subTitleJoin joinTitle">$59/PER MONTH</p>
+            <p class="text-center">
+              With a 1-year commitment, we offer a monthly membership for only
+              $59. When you pre-purchase a complete year Individual membership
+              you get 2/m Free Extention.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="personalInfoContainer">
+    <div class="containerSecondary">
+      <h4 class="font joinTitle">PERSONAL INFORMATION:</h4>
+      <div class="inputsContainer">
+        <div>
+          <div class="containerName">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Name"
+              />
+              <label for="floatingPassword">Name</label>
+            </div>
+          </div>
+          <div class="boxgGenderDate">
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Gender
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Male</a></li>
+                <li><a class="dropdown-item" href="#">Female</a></li>
+                <li><a class="dropdown-item" href="#">Other</a></li>
+              </ul>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/aaaa"
+              />
+              <label for="floatingInput">dd/mm/aaaa</label>
+            </div>
+          </div>
+
+          <div class="boxStreetCAndS">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="street address"
+              />
+              <label for="floatingInput">Street address</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="city"
+              />
+              <label for="floatingPassword">City</label>
+            </div>
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                State
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Alabama</a></li>
+                <li><a class="dropdown-item" href="#">Alaska</a></li>
+                <li><a class="dropdown-item" href="#">Arizona</a></li>
+                <li><a class="dropdown-item" href="#">Arkansas</a></li>
+                <li><a class="dropdown-item" href="#">California</a></li>
+                <!-- Aquí puedes añadir más estados -->
+              </ul>
+            </div>
+          </div>
+          <div class="boxStreetCAndS">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Zip code"
+              />
+              <label for="floatingInput">zip code</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Email"
+              />
+              <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Phone"
+              />
+              <label for="floatingInput">Phone</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="termsContainer">
+    <label class="checkbox-inline termsContainer"
+      ><input type="checkbox" value="" />&nbsp; I agree to the terms and
+      conditions of storage of my personal data.</label
+    >
+  </div>
+  <div class="buttonSend mt-5">
+    <div class="mb-5 selectors buttonSend">
+      <img src="../../../../assets/icons/rowRigthBlack.svg" alt="" />
+      <span class="font sendH4">CONTINUE</span>
+    </div>
+  </div>
+</div>
+<div class="triangle-container">
+  <div class="triangle"></div>
+  <div class="followRock">
+    <span class="font followText"> FOLLOW </span>
+    <span class="font Rock"> @ROCKDIDIT </span>
+  </div>
+</div>

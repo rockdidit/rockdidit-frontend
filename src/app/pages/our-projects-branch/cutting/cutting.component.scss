@@ -1,0 +1,148 @@
+$color: #c7e902;
+
+.font {
+  font-family: "Poppins", sans-serif;
+}
+.titleContainer {
+  display: flex;
+  justify-content: start;
+  margin: auto;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  h3 {
+    z-index: 1;
+    text-align: start;
+    @media screen and (max-width: 1300px) {
+      font-size: 2rem;
+    }
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .containerEnrollComplete {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .containerEnroll {
+    width: 100rem;
+  }
+  .containerImg {
+    contain: content;
+    width: 100rem;
+    height: 30rem;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  // .contianerCuttingAndButton{
+  //   // margin-left: 20rem;
+  //   // margin-right: 20rem;
+  // }
+  .contianerFlexWeb {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.enrollNow {
+  display: flex;
+  margin: auto;
+  justify-content: start;
+  margin-left: 5rem;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.containerOnlyRow:hover {
+  img {
+    animation: moveRight 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow:not(:hover) {
+  img {
+    animation: moveBack 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow {
+  img {
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.containerOnlyRow {
+  img {
+    width: 15rem;
+    margin-right: 5rem;
+    @media screen and (max-width: 1000px) {
+      width: 8rem;
+      // margin-top: -2.75rem;
+      // margin-right: -5rem !important;
+    }
+  }
+  margin-bottom: 10rem !important;
+  margin-top: 2rem !important;
+  margin: auto;
+  justify-content: end;
+  display: flex;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: start;
+  margin: auto;
+  margin-left: 4rem;
+}
+
+.containerImg {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  img {
+    width: 100%;
+  }
+}
+
+.containerText {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  // color: white;
+  // background-color: rgb(255, 255, 255);
+  p {
+    margin-right: 4rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}

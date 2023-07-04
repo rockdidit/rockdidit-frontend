@@ -1,0 +1,169 @@
+// .boxGeneral{
+
+// }
+
+// .dataContact{
+
+// }
+
+.containerTitleForm {
+  margin: auto;
+  justify-content: start;
+  display: flex;
+  width: 90%;
+  h6 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: white;
+  }
+}
+
+.containerDisplay {
+  margin: auto;
+  margin-top: -6.5rem;
+  justify-content: center;
+  display: flex;
+}
+
+.containerImg {
+  margin: auto;
+  justify-content: end;
+  display: flex;
+  margin-right: 3rem;
+  z-index: -1;
+  .imgRow {
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    margin-top: -2rem;
+    width: 10rem;
+  }
+}
+.containerTitle {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  h1 {
+    font-size: 3rem;
+  }
+}
+.containerBackGround {
+  background-color: black;
+  width: 100%;
+  padding-bottom: 5rem;
+  // height: 40rem;
+}
+textarea {
+  height: 12.5rem; /* Set the desired height value */
+}
+
+@media screen and (max-width: 1000px) {
+  .containerDisplay {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .containerImg {
+    margin-right: 15%;
+  }
+  .contianerButton {
+    margin-left: 22rem !important;
+  }
+  .containerTitleForm {
+    width: 50%;
+  }
+  .containerForm {
+    width: 50% !important;
+  }
+  .imgRow {
+    width: 20rem !important;
+  }
+  .containerMargins {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.containerForm {
+  width: 90%;
+  div {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.labelSend:hover{
+  text-decoration: underline;
+}
+
+.labelSend {
+  cursor: pointer;
+  color: white;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+
+.displayCenter {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.containerMargins {
+  div {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.font {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.containerImg:hover {
+  img {
+    animation: moveRight 0.5s ease-in-out forwards;
+  }
+}
+
+.containerImg:not(:hover) {
+  img {
+    animation: moveBack 0.5s ease-in-out forwards;
+  }
+}
+
+.contianerButton {
+  cursor: pointer;
+  margin: auto;
+  justify-content: start;
+  display: flex;
+  img {
+    margin-top: 1;
+    width: 2rem;
+  }
+}
+
+.containerContact {
+  z-index: -2;
+  border-top: 1px solid rgb(225, 225, 225);
+  margin-top: -6.6rem;
+  margin-bottom: 5rem;
+}

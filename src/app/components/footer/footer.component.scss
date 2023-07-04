@@ -116,6 +116,18 @@
   display: flex;
 }
 
+
+.iconRock{
+  width: 4rem;
+}
+
+.displayElements{
+  @media screen and (min-width: 800px) {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
+}
 .socialIcons {
   margin-top: 5rem;
   svg {

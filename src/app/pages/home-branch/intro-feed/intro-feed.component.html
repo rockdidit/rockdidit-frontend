@@ -1,0 +1,231 @@
+<div class="fatherMobile">
+  <div class="headerTitle">
+    <h2>INTRODUCTION</h2>
+    <h1 style="font-size: 3rem">
+      ROCK <br />
+      DID IT
+    </h1>
+    <div class="icon-thick">
+      <img src="../../../../assets/icons/rightRow.svg" alt="" />
+    </div>
+  </div>
+  <ng-container *ngFor="let item of intros">
+    <div class="mb-4">
+      <div class="mt-5 centerImgs">
+        <ng-container *ngIf="item.img">
+          <img class="feedImg" [src]="item.img" alt="" />
+        </ng-container>
+      </div>
+      <div class="textContainer mt-5">
+        <div>
+          <h3>{{ item.title }}</h3>
+          <ng-container *ngIf="item.extra">
+            <strong>{{ item.extra }}</strong>
+          </ng-container>
+          <p style="font-family: sans-serif !important">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="d-flex ms-5 mb-5">
+    <img class="imgRowForSelects" src="../../../../assets/icons/rightRow.svg" alt="">
+    <p class="ms-4 AboutUs">MORE ABOUT US</p>
+  </div>
+  <div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <ng-container *ngFor="let item of intros; let i = index">
+          <div class="carousel-item" [class.active]="i === 0">
+            <img [src]="item.img" class="d-block w-100" alt="..." />
+          </div>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon colorIcon"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon colorIcon"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="covidContainer">
+      <span class="material-symbols-outlined covid"> coronavirus </span>
+      <strong> CLEAN + AIRY SPACE = STAY SAFE IN COVID 19 PANDEMIC. </strong>
+    </div>
+    <div class="equipment">
+      <h3 class="titleEquipment">EQUIPMENT</h3>
+      <p style="font-family: sans-serif !important">
+        Give your workout more variety than ever with our accessories, from
+        warmup to cooldown. Increase your body’s capacities every day, from
+        stability to mobility, from power to speed.
+      </p>
+    </div>
+    <div class="ourMerchandiseTitle">
+      <h1 class="titleEquipment mt-1">
+        OUR <br />
+        MERCHANDISE
+      </h1>
+    </div>
+    <div class="clickHereDiv">
+      <a class="titleEquipment clickHere" href="#">CLICK HERE</a>
+    </div>
+  </div>
+</div>
+
+<div class="fatherWeb">
+  <div class="centerDiv">
+    <div class="containerStories">
+      <div class="headerTitle">
+        <h2 style="font-size: 3rem">INTRODUCTION</h2>
+        <h1 style="font-size: 7rem">
+          ROCK <br />
+          DID IT
+        </h1>
+        <div class="icon-thick">
+          <img src="../../../../assets/icons/rightRow.svg" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div id="containerImg1" class="mb-4 containerAbstraction col">
+          <div class="mt-5 centerImgs">
+            <ng-container *ngIf="intros[0].img">
+              <img class="feedImg" [src]="intros[0].img" alt="" />
+            </ng-container>
+          </div>
+          <div class="textContainer mt-5">
+            <div class="containerTextP">
+              <ng-container *ngIf="intros[0].title">
+                <h3>{{ intros[0].title }}</h3>
+              </ng-container>
+              <ng-container *ngIf="intros[0].extra">
+                <strong>{{ intros[0].extra }}</strong>
+              </ng-container>
+              <p style="font-family: sans-serif !important">
+                {{ intros[0].description }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="containerImg2" class="mb-4 containerAbstraction col-6">
+          <div class="mt-5 centerImgs">
+            <ng-container *ngIf="intros[1].img">
+              <img class="feedImg" [src]="intros[1].img" alt="" />
+            </ng-container>
+          </div>
+          <div class="textContainer mt-5">
+            <div class="containerTextP">
+              <ng-container *ngIf="intros[1].title">
+                <h3>{{ intros[1].title }}</h3>
+              </ng-container>
+              <ng-container *ngIf="intros[1].extra">
+                <strong>{{ intros[1].extra }}</strong>
+              </ng-container>
+              <p style="font-family: sans-serif !important">
+                {{ intros[1].description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="containerImg3" class="row">
+        <div class="col">
+          <div id="carouselExample2" class="carousel slide carousel-container">
+            <div class="carousel-inner">
+              <ng-container *ngFor="let item of intros; let i = index">
+                <div class="carousel-item" [class.active]="i === 0">
+                  <img [src]="item.img" class="d-block w-100" alt="..." />
+                </div>
+              </ng-container>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon colorIcon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon colorIcon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="covidContainer">
+            <span class="material-symbols-outlined covid"> coronavirus </span>
+            <strong>
+              CLEAN + AIRY SPACE = STAY SAFE IN COVID 19 PANDEMIC.
+            </strong>
+          </div>
+          <div class="equipment">
+            <h3 class="titleEquipment">EQUIPMENT</h3>
+            <p style="font-family: sans-serif !important">
+              Give your workout more variety than ever with our accessories,
+              from warmup to cooldown. Increase your body’s capacities every
+              day, from stability to mobility, from power to speed.
+            </p>
+          </div>
+        </div>
+        <div class="mb-4 containerAbstraction col-6">
+          <div class="mt-5 centerImgs">
+            <ng-container *ngIf="intros[2].img">
+              <img class="feedImg" [src]="intros[2].img" alt="" />
+            </ng-container>
+          </div>
+          <div class="textContainer mt-5">
+            <div class="containerTextP">
+              <ng-container *ngIf="intros[2].title">
+                <h3>{{ intros[2].title }}</h3>
+              </ng-container>
+              <ng-container *ngIf="intros[2].extra">
+                <strong>{{ intros[2].extra }}</strong>
+              </ng-container>
+              <p style="font-family: sans-serif !important">
+                {{ intros[2].description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ourMerchandiseTitle">
+    <h1 class="titleEquipment mt-1">
+      OUR <br />
+      MERCHANDISE
+    </h1>
+  </div>
+  <div class="clickHereDiv">
+    <a class="titleEquipment clickHere" href="#">CLICK HERE</a>
+  </div>
+</div>
