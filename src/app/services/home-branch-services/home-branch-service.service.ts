@@ -4,6 +4,10 @@ import { MainService } from '../main-services/main.service';
 @Injectable({
   providedIn: 'root',
 })
+
+// Note that the name of the service is temporary
+// since the methods integrated in it
+// can be used in other components
 export class HomeBranchServiceService {
   constructor(private mainService: MainService) {}
 
