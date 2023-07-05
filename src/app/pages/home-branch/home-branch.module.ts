@@ -7,7 +7,7 @@ import { HeaderCoursesComponent } from './header-courses/header-courses.componen
 import { IntroFeedComponent } from './intro-feed/intro-feed.component';
 import { JoinComponent } from './join/join.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
-import { UpcomingEventsComponent } from '../our-projects-branch/upcoming-events/upcoming-events.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 
 @NgModule({
   declarations: [

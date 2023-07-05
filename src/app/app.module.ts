@@ -11,7 +11,6 @@ import { ContactBranchModule } from './pages/contact-branch/contact-branch.modul
 import { BlogBranchModule } from './pages/blog-branch/blog-branch.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AllCoursesBranchComponent } from './pages/all-courses-branch/all-courses-branch.component';
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
   imports: [
