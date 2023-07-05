@@ -1,4 +1,3 @@
-import { VisitProjectButtonComponent } from './pages/our-projects-branch/visit-project-button/visit-project-button.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

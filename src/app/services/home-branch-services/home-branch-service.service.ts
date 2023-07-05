@@ -1,0 +1,56 @@
+import { Injectable } from '@angular/core';
+import { MainService } from '../main-services/main.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class HomeBranchServiceService {
+  constructor(private mainService: MainService) {}
+
+  /**
+   * @param loginParams example parameters {
+   *      "identifier": "foobar",
+   *      "password": "Test1234"
+   *    }
+   * @param registerUser {
+   *      "username": "foobar",
+   *      "email": "foo.bar@strapi.io",
+   *      "password": "Test1234"
+   *     }
+   *
+   */
+
+  postAuthLocalRegister(registerUser: any) {
+    return new Promise((resolve, reject) => {
+      this.mainService.post(`auth/local/register`, registerUser).subscribe(
+        (response: any) => {
+          console.log(response as any);
+          const res = response as any;
+          const tokenId = res.jwt as string;
+          this.mainService.setLocalStorageToken('id_token', tokenId);
+          resolve(response);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+
+  postAuthLocalLogin(loginParams: any) {
+    return new Promise<any[]>((resolve, reject) => {
+      this.mainService.post(`auth/local`, loginParams).subscribe(
+        (response: any) => {
+          console.log(response as any);
+          const res = response as any;
+          const tokenId = res.jwt as string;
+          this.mainService.setLocalStorageToken('id_token', tokenId);
+          resolve(response);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+}
