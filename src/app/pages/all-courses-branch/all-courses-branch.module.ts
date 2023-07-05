@@ -5,16 +5,9 @@ import { AllCoursesBranchRoutingModule } from './all-courses-branch-routing.modu
 import { AllCoursesBranchComponent } from './all-courses-branch.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
 
-
 @NgModule({
-  declarations: [
-    AllCoursesBranchComponent,
-    AllcoursesComponent
-  ],
-  imports: [
-    CommonModule,
-    AllCoursesBranchRoutingModule
-  ],
+  declarations: [AllCoursesBranchComponent, AllcoursesComponent],
+  imports: [CommonModule, AllCoursesBranchRoutingModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AllCoursesBranchModule { }
+export class AllCoursesBranchModule {}
