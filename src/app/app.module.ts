@@ -23,7 +23,6 @@ import { OurProjectsBranchComponent } from './pages/our-projects-branch/our-proj
 import { ContactBranchComponent } from './pages/contact-branch/contact-branch.component';
 import { BlogBranchComponent } from './pages/blog-branch/blog-branch.component';
 import { AllCoursesBranchModule } from './pages/all-courses-branch/all-courses-branch.module';
-
 @NgModule({
   declarations: [
     AppComponent,
