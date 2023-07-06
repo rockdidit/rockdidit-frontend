@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnimationService } from 'src/app/services/animations/animation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  constructor(private animationservice: AnimationService){
+  }
+  toggleAnimation() {
+    this.animationservice.toggleAnimationDropDown();
+  }
 }

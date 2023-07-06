@@ -1,0 +1,29 @@
+<ng-container *ngFor="let item of dropDownItemsChildren">
+  <div
+    (click)="toggleCollapse(item.title)"
+    role="button"
+    aria-expanded="false"
+    [attr.aria-controls]="'multiCollapseExample' + item.title"
+    class="principalListElementDropDown"
+  >
+    <span class="spanFirstButton"
+      >{{ item.title }}
+      <span class="material-symbols-outlined spanFirstButton"> add </span></span
+    >
+  </div>
+  <div class="row">
+    <div class="col">
+      <div
+        [id]="'multiCollapseExample' + item.title"
+        [class.collapse]="isCollapsed(item.title)"
+        [class.multi-collapse]="isCollapsed(item.title)"
+      >
+        <ul>
+          <li *ngFor="let i of item.childrens">
+            <span>{{ i }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-container>

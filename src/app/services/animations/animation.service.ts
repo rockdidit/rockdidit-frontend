@@ -25,4 +25,9 @@ export class AnimationService {
     });
   }
 
+  toggleAnimationDropDown() {
+    const element = document.getElementById('toggleContainer');
+    element!.classList.toggle('active');
+  }
+
 }

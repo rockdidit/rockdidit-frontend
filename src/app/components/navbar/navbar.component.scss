@@ -27,7 +27,7 @@
   }
 }
 
-.carShop{
+.carShop {
   cursor: pointer;
   width: 2rem !important;
 }
@@ -38,6 +38,7 @@
   }
 
   .menuButtonMobile {
+    cursor: pointer;
     font-size: 3rem;
     color: #000000;
   }
@@ -53,7 +54,7 @@
   }
 
   .containerWeb {
-    img{
+    img {
       width: 2rem;
     }
     display: flex;
@@ -61,16 +62,15 @@
     margin: auto;
   }
 
-
   .selectors {
     display: flex;
     justify-content: center;
     margin: auto;
     li:hover,
-    li:active{
+    li:active {
       text-decoration: underline;
     }
-    li{
+    li {
       cursor: pointer;
       font-family: "Poppins", sans-serif;
     }
@@ -95,3 +95,14 @@
   }
 }
 
+#toggleContainer {
+  width: 100%;
+  height: 0;
+  background-color: black;
+  transition: height 1s;
+  overflow: hidden;
+}
+
+#toggleContainer.active {
+  height: 20rem;
+}

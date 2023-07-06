@@ -1,0 +1,29 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.spanFirstButton {
+  color: white;
+  font: 900;
+  font-size: 1.5rem;
+  span {
+    color: white;
+    // font: 900;
+    font-size: 1rem;
+  }
+}
+
+// .principalListElementDropDown {
+// }
+
+ul {
+  list-style: none;
+  li {
+    list-style-type: none;
+    span {
+      cursor: pointer;
+      color: white;
+      font-size: 1rem;
+    }
+  }
+}
