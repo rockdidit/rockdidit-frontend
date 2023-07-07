@@ -7,6 +7,22 @@ export class AnimationService {
 
   constructor() { }
 
+  collapsedSections: string[] = [];
+
+  toggleCollapse(sectionId: string) {
+    if (this.isCollapsed(sectionId)) {
+      this.collapsedSections = this.collapsedSections.filter(
+        (id) => id !== sectionId
+      );
+    } else {
+      this.collapsedSections = [sectionId];
+    }
+  }
+
+  isCollapsed(sectionId: string): boolean {
+    return this.collapsedSections.includes(sectionId);
+  }
+
   scrollOpacityAnimation(className: string){
     const options = {
       threshold: 0.1,

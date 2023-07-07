@@ -9,21 +9,50 @@
   span {
     color: white;
     // font: 900;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
-// .principalListElementDropDown {
-// }
+.boxContent {
+  margin: 2rem 0rem 2rem 2rem;
+}
 
 ul {
   list-style: none;
+  margin-top: 1rem;
   li {
     list-style-type: none;
     span {
       cursor: pointer;
       color: white;
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
+  }
+}
+
+.textTransitionColor {
+  display: flex; align-items: center;
+  &:hover,
+  &:focus {
+    span {
+      transition: color 0.3s ease-in-out;
+      color: #c7e902;
+    }
+
+  }
+  &:not(:hover):not(:focus) {
+    span {
+      color: #ffffff; /* Color final cuando no se hace hover ni focus */
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}
+
+.spanMarginContainerdflexForCenter{
+  .material-symbols-outlined{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
 }

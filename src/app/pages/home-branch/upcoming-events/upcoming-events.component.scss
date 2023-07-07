@@ -39,10 +39,10 @@
       margin: auto;
       display: flex;
       justify-content: center;
-      img{
+      img {
         margin: auto;
-      display: flex;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
       }
     }
   }
@@ -145,9 +145,6 @@
   }
   .inputsContainer {
     width: 50rem !important;
-    // width: 20rem;
-    // margin: auto;
-    // justify-content: center;
     display: flex;
   }
   .titleText {
@@ -294,7 +291,7 @@
 @media screen and (max-width: 1000px) {
   .icon {
     width: 10rem;
-    margin-right: 2rem;
+    margin-right: 5rem;
   }
 }
 

@@ -33,6 +33,7 @@
   // }
 
   .containerimg img {
+    padding-top: 5rem;
     max-width: 16rem !important;
     height: 20rem !important;
     transition: transform 0.3s;
@@ -101,6 +102,7 @@ h1 {
   transition: transform 0.1s ease-in-out;
   margin: auto;
   justify-content: start;
+  align-items: center;
   display: flex;
 }
 
@@ -150,11 +152,19 @@ h1 {
 }
 
 .textFont {
-  padding-top: 0.2rem;
-  margin-left: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-left: 1rem !important;
   font-family: "Poppins", sans-serif;
+  p{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
 }
 
 .wallet {
@@ -171,10 +181,11 @@ h1 {
     text-align: center;
   }
   .containerimg img {
-    max-width: 110%;
-    height: 15rem;
+    max-width: 100%;
+    padding-top: 5rem;
     transition: transform 0.3s;
     transform: scale(1.9);
+    contain: content;
   }
   .containerimg:hover img {
     transform: scale(2.4);

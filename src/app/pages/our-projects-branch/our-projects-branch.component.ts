@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimationService } from 'src/app/services/animations/animation.service';
+import { AnimationService } from 'src/app/providers/animations/animation.service';
 
 @Component({
   selector: 'app-our-projects-branch',

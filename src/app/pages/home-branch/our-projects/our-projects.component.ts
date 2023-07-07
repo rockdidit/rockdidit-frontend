@@ -5,26 +5,6 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./our-projects.component.scss']
 })
 export class OurProjectsComponent {
-  // constructor(private elementRef: ElementRef) {}
-  // ngOnInit() {
-  //   const options = {
-  //     threshold: 0.1, // Ajusta el valor según tus necesidades
-  //   };
-
-  //   const elements = this.elementRef.nativeElement.querySelectorAll('.fade-in-element');
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add('visible'); // Agrega la clase "visible"
-  //         observer.unobserve(entry.target);
-  //       }
-  //     });
-  //   }, options);
-
-  //   elements.forEach((element: any) => {
-  //     observer.observe(element);
-  //   });
-  // }
   projects: any[] = [
     {
       img: 'https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/pexels-photo-1793035.jpeg?fit=1125%2C750&ssl=1',
