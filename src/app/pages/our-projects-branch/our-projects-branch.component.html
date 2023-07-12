@@ -1,7 +1,23 @@
 <div class="marginTopForComponentsWithNav">
-  <app-header-intro class="fade-in-element"></app-header-intro>
-  <app-i-did-it class="fade-in-element"></app-i-did-it>
-  <app-natural-herb-mineral class="fade-in-element"></app-natural-herb-mineral>
-  <app-cutting class="fade-in-element"></app-cutting>
+  <app-header-intro
+    [main_title]="headerIntroInfo.main_title"
+    [description]="headerIntroInfo.description"
+    class="fade-in-element"
+  ></app-header-intro>
+  <app-i-did-it
+    [title]="iDidIt.title"
+    [description]="iDidIt.description"
+    class="fade-in-element"
+  ></app-i-did-it>
+  <app-natural-herb-mineral
+    [titleArr]="naturalHerbsMinerals.titleArr"
+    [description]="naturalHerbsMinerals.description"
+    class="fade-in-element"
+  ></app-natural-herb-mineral>
+  <app-cutting
+    [title]="cutting.title"
+    [description]="cutting.description"
+    class="fade-in-element"
+  ></app-cutting>
   <app-upcoming-events class="fade-in-element"></app-upcoming-events>
 </div>

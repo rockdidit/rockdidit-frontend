@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-intro',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-intro.component.scss']
 })
 export class HeaderIntroComponent {
-
+  @Input() main_title?: string = '';
+  @Input() description?: string = '';
 }

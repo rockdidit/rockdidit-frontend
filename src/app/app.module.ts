@@ -11,6 +11,7 @@ import { BlogBranchModule } from './pages/blog-branch/blog-branch.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DropdownComponent } from './components/navbar/dropdown/dropdown/dropdown.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent, DropdownComponent],
   imports: [
@@ -21,6 +22,7 @@ import { DropdownComponent } from './components/navbar/dropdown/dropdown/dropdow
     HomeBranchModule,
     ContactBranchModule,
     BlogBranchModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

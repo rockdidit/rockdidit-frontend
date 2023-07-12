@@ -22,7 +22,31 @@ export class HomeBranchServiceService {
    *      "password": "Test1234"
    *     }
    *
+   *  @param id: string | number
+   *
    */
+
+  pushContentJsonToWebsiteInformation(
+    contentJson: any,
+    index: number,
+    webSiteInformationArr: any[]
+  ): void {
+    if (index === 0) {
+      webSiteInformationArr[index].courses.push(contentJson['courses']);
+    } else if (index === 1) {
+      webSiteInformationArr[index].introduction.push(
+        contentJson['introduction']
+      );
+    } else if (index === 2) {
+      webSiteInformationArr[index].projects.push(contentJson['projects']);
+    } else if (index === 3) {
+      webSiteInformationArr[index].events.push(contentJson['events']);
+    } else if (index === 4) {
+      webSiteInformationArr[index].buys.push(contentJson['buys']);
+    } else if (index === 5) {
+      webSiteInformationArr[index].plans.push(contentJson['plans']);
+    }
+  }
 
   postAuthLocalRegister(registerUser: any) {
     return new Promise((resolve, reject) => {

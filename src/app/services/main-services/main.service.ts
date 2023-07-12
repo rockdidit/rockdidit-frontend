@@ -17,12 +17,15 @@ export class MainService {
    * @param route The route the function will return the objects from.
    * @returns A HTTP response code and message.
    */
-  get(route: string) {
-    this.header = this.setHeader();
-    return this.http.get(`${environment.baseURL}/api/${route}`, {
-      headers: this.header,
-    });
+  getInfoComponents(route: string) {
+    return this.http.get(`${environment.baseURL}/api/${route}`);
   }
+  // get(route: string) {
+  //   this.header = this.setHeader();
+  //   return this.http.get(`${environment.baseURL}/api/${route}`, {
+  //     headers: this.header,
+  //   });
+  // }
 
   /**
    * This function calls the backend to post an object of a type indicated in the route.

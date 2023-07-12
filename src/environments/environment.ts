@@ -1,3 +1,3 @@
 export const environment: any = {
-  baseURL: 'http://localhost'
+  baseURL: 'https://stingray-app-88b36.ondigitalocean.app'
 };

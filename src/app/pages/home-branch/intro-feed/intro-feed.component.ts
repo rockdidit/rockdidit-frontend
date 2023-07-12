@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface introsModel{
   title: string;
@@ -13,6 +13,8 @@ interface introsModel{
   styleUrls: ['./intro-feed.component.scss'],
 })
 export class IntroFeedComponent {
+  @Input() introArr: any;
+
   intros: introsModel[] = [
     {
       title: 'MISSION',

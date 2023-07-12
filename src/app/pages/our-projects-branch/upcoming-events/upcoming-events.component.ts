@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./upcoming-events.component.scss'],
 })
 export class UpcomingEventsComponent {
+
+  @Input() titleArr: string[] = [];
+  @Input() decription: string = "";
+
   events: any[] = [
     {
       date: '14 SEP.',

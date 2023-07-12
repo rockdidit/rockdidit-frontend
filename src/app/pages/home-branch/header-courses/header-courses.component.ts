@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-courses',
   templateUrl: './header-courses.component.html',
   styleUrls: ['./header-courses.component.scss'],
 })
-export class HeaderCoursesComponent {
+export class HeaderCoursesComponent implements OnInit {
+  @Input() coursesArr?: any[] = [];
+  ngOnInit() {
+    console.log(this.coursesArr);
+  }
+
   courses: any[] = [
     {
       title1: 'CONFERENCE',

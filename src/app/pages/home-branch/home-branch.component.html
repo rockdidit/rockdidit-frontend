@@ -1,7 +1,19 @@
 <div class="marginTopForComponentsWithNav">
-  <app-header-courses class="fade-in-element mt-5"></app-header-courses>
-  <app-intro-feed class="fade-in-element"></app-intro-feed>
-  <app-our-projects class="fade-in-element"></app-our-projects>
-  <app-upcoming-events class="fade-in-element"></app-upcoming-events>
+  <app-header-courses
+    [coursesArr]="webSiteInformationArr[0].courses"
+    class="fade-in-element mt-5"
+  ></app-header-courses>
+  <app-intro-feed
+    [introArr]="webSiteInformationArr[1].introduction"
+    class="fade-in-element"
+  ></app-intro-feed>
+  <app-our-projects
+    [projArr]="webSiteInformationArr[2].projects"
+    class="fade-in-element"
+  ></app-our-projects>
+  <app-upcoming-events
+    [eventsArr]="webSiteInformationArr[3].events"
+    class="fade-in-element"
+  ></app-upcoming-events>
   <app-join class="fade-in-element"></app-join>
 </div>

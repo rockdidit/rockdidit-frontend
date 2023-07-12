@@ -8,6 +8,7 @@ import { IntroFeedComponent } from './intro-feed/intro-feed.component';
 import { JoinComponent } from './join/join.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
     OurProjectsComponent,
     UpcomingEventsComponent,
   ],
-  imports: [CommonModule, HomeBranchRoutingModule],
+  imports: [CommonModule, HomeBranchRoutingModule, HttpClientModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeBranchModule {}
