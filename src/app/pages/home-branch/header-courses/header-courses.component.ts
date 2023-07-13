@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { iif } from 'rxjs';
 
 @Component({
   selector: 'app-header-courses',
@@ -6,9 +7,10 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./header-courses.component.scss'],
 })
 export class HeaderCoursesComponent implements OnInit {
-  @Input() coursesArr?: any[] = [];
+  @Input() coursesArr: any;
+
+
   ngOnInit() {
-    console.log(this.coursesArr);
   }
 
   courses: any[] = [

@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-upcoming-events',
   templateUrl: './upcoming-events.component.html',
   styleUrls: ['./upcoming-events.component.scss'],
 })
-export class UpcomingEventsComponent {
+export class UpcomingEventsComponent implements OnInit{
+  @Input() buysArr?: any[];
+  @Input() eventsArr?: any[];
 
+  ngOnInit(): void {
+    // console.log(this.buysArr);
+    // console.log(this.eventsArr);
+  }
 
   events: any[] = [
     {

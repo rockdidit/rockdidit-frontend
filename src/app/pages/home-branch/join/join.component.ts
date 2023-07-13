@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-join',
   templateUrl: './join.component.html',
   styleUrls: ['./join.component.scss']
 })
-export class JoinComponent {
+export class JoinComponent implements OnInit{
+  @Input() plansArr?: any[];
+
+  ngOnInit() {
+    // console.log(this.plansArr)
+  }
+
   offerSelected: boolean[] = [false, false, false];
 
   selectOffer(index: number) {
-    // Deseleccionar todos los elementos
     this.offerSelected = this.offerSelected.map(() => false);
-
-    // Seleccionar el elemento específico
     this.offerSelected[index] = true;
   }
 }

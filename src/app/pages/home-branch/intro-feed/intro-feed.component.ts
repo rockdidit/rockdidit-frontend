@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-interface introsModel{
+type introsModel = {
   title: string;
   description: string;
   img: string;
@@ -13,7 +13,11 @@ interface introsModel{
   styleUrls: ['./intro-feed.component.scss'],
 })
 export class IntroFeedComponent {
-  @Input() introArr: any;
+  @Input() introArr?: any[];
+
+  ngOnInit() {
+    // console.log(this.introArr);
+  }
 
   intros: introsModel[] = [
     {

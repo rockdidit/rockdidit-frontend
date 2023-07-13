@@ -12,8 +12,12 @@
     class="fade-in-element"
   ></app-our-projects>
   <app-upcoming-events
+    [buysArr]="webSiteInformationArr[4].buys"
     [eventsArr]="webSiteInformationArr[3].events"
     class="fade-in-element"
   ></app-upcoming-events>
-  <app-join class="fade-in-element"></app-join>
+  <app-join
+    [plansArr]="webSiteInformationArr[5].plans"
+    class="fade-in-element"
+  ></app-join>
 </div>
