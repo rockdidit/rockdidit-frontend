@@ -1,9 +1,9 @@
 <div class="fatherMobile">
-  <div class="headerTitle">
-    <h2>INTRODUCTION</h2>
+  <div *ngIf="renderSomeStrings" class="headerTitle">
+    <h2>{{ main_title![0] }}</h2>
     <h1 style="font-size: 3rem">
-      ROCK <br />
-      DID IT
+      {{ main_title![1] }} <br />
+      {{ main_title![2] }} {{ main_title![3] }}
     </h1>
     <div class="icon-thick">
       <img src="../../../../assets/icons/rightRow.svg" alt="" />
@@ -19,8 +19,8 @@
       <div class="textContainer mt-5">
         <div>
           <h3>{{ item.title }}</h3>
-          <ng-container *ngIf="item.extra">
-            <strong>{{ item.extra }}</strong>
+          <ng-container *ngIf="item.subtitle">
+            <strong>{{ item.subtitle }}</strong>
           </ng-container>
           <p style="font-family: sans-serif !important">
             {{ item.description }}
@@ -30,8 +30,14 @@
     </div>
   </ng-container>
   <div class="d-flex ms-5 mb-5">
-    <img class="imgRowForSelects" src="../../../../assets/icons/rightRow.svg" alt="">
-    <p class="ms-4 AboutUs">MORE ABOUT US</p>
+    <img
+      class="imgRowForSelects"
+      src="../../../../assets/icons/rightRow.svg"
+      alt=""
+    />
+    <p class="ms-4 AboutUs" *ngIf="renderSomeStrings">
+      {{ spanWithoutIterations[0].span }}
+    </p>
   </div>
   <div>
     <div id="carouselExample" class="carousel slide">
@@ -69,24 +75,26 @@
     </div>
     <div class="covidContainer">
       <span class="material-symbols-outlined covid"> coronavirus </span>
-      <strong> CLEAN + AIRY SPACE = STAY SAFE IN COVID 19 PANDEMIC. </strong>
+      <strong *ngIf="renderSomeStrings">
+        {{ spanWithoutIterations[1].span }}
+      </strong>
     </div>
-    <div class="equipment">
-      <h3 class="titleEquipment">EQUIPMENT</h3>
+    <div *ngIf="renderSomeStrings" class="equipment">
+      <h3 class="titleEquipment">{{ spanWithoutIterations[1].title }}</h3>
       <p style="font-family: sans-serif !important">
-        Give your workout more variety than ever with our accessories, from
-        warmup to cooldown. Increase your body’s capacities every day, from
-        stability to mobility, from power to speed.
+        {{ spanWithoutIterations[1].description }}
       </p>
     </div>
     <div class="ourMerchandiseTitle">
       <h1 class="titleEquipment mt-1">
-        OUR <br />
-        MERCHANDISE
+        {{ spanWithoutIterations[2].title![0] }} <br />
+        {{ spanWithoutIterations[2].title![1] }}
       </h1>
     </div>
     <div class="clickHereDiv">
-      <a class="titleEquipment clickHere" href="#">CLICK HERE</a>
+      <a class="titleEquipment clickHere" href="#">{{
+        spanWithoutIterations[2].span
+      }}</a>
     </div>
   </div>
 </div>
@@ -94,11 +102,13 @@
 <div class="fatherWeb">
   <div class="centerDiv">
     <div class="containerStories">
-      <div class="headerTitle">
-        <h2 style="font-size: 3rem">INTRODUCTION</h2>
+      <div *ngIf="renderSomeStrings" class="headerTitle">
+        <h2 style="font-size: 3rem">
+          {{ main_title![0] }}
+        </h2>
         <h1 style="font-size: 7rem">
-          ROCK <br />
-          DID IT
+          {{ main_title![1] }} <br />
+          {{ main_title![2] }} {{ main_title![3] }}
         </h1>
         <div class="icon-thick">
           <img src="../../../../assets/icons/rightRow.svg" alt="" />
@@ -116,8 +126,8 @@
               <ng-container *ngIf="intros[0].title">
                 <h3>{{ intros[0].title }}</h3>
               </ng-container>
-              <ng-container *ngIf="intros[0].extra">
-                <strong>{{ intros[0].extra }}</strong>
+              <ng-container *ngIf="intros[0].subtitle">
+                <strong>{{ intros[0].subtitle }}</strong>
               </ng-container>
               <p style="font-family: sans-serif !important">
                 {{ intros[0].description }}
@@ -136,8 +146,8 @@
               <ng-container *ngIf="intros[1].title">
                 <h3>{{ intros[1].title }}</h3>
               </ng-container>
-              <ng-container *ngIf="intros[1].extra">
-                <strong>{{ intros[1].extra }}</strong>
+              <ng-container *ngIf="intros[1].subtitle">
+                <strong>{{ intros[1].subtitle }}</strong>
               </ng-container>
               <p style="font-family: sans-serif !important">
                 {{ intros[1].description }}
@@ -183,16 +193,14 @@
           </div>
           <div class="covidContainer">
             <span class="material-symbols-outlined covid"> coronavirus </span>
-            <strong>
-              CLEAN + AIRY SPACE = STAY SAFE IN COVID 19 PANDEMIC.
+            <strong *ngIf="renderSomeStrings">
+              {{ spanWithoutIterations[1].span }}
             </strong>
           </div>
-          <div class="equipment">
-            <h3 class="titleEquipment">EQUIPMENT</h3>
+          <div *ngIf="renderSomeStrings" class="equipment">
+            <h3 class="titleEquipment">{{ spanWithoutIterations[1].title }}</h3>
             <p style="font-family: sans-serif !important">
-              Give your workout more variety than ever with our accessories,
-              from warmup to cooldown. Increase your body’s capacities every
-              day, from stability to mobility, from power to speed.
+              {{ spanWithoutIterations[1].description }}
             </p>
           </div>
         </div>
@@ -207,8 +215,8 @@
               <ng-container *ngIf="intros[2].title">
                 <h3>{{ intros[2].title }}</h3>
               </ng-container>
-              <ng-container *ngIf="intros[2].extra">
-                <strong>{{ intros[2].extra }}</strong>
+              <ng-container *ngIf="intros[2].subtitle">
+                <strong>{{ intros[2].subtitle }}</strong>
               </ng-container>
               <p style="font-family: sans-serif !important">
                 {{ intros[2].description }}
@@ -221,11 +229,13 @@
   </div>
   <div class="ourMerchandiseTitle">
     <h1 class="titleEquipment mt-1">
-      OUR <br />
-      MERCHANDISE
+      {{ spanWithoutIterations[2].title![0] }} <br />
+      {{ spanWithoutIterations[2].title![1] }}
     </h1>
   </div>
   <div class="clickHereDiv">
-    <a class="titleEquipment clickHere" href="#">CLICK HERE</a>
+    <a class="titleEquipment clickHere" href="#">{{
+      spanWithoutIterations[2].span
+    }}</a>
   </div>
 </div>

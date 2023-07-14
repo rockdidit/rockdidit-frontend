@@ -30,11 +30,10 @@ export class HeaderCoursesComponent implements OnInit {
           this.coursesArr[index].title &&
           this.coursesArr.length > 0
         ) {
-          const splitForTitle = this.coursesArr[index].title!.split(" ");
+          const splitForTitle = this.coursesArr[index].title!.split(' ');
           this.courses[index - 1].title = splitForTitle;
         }
       });
-      console.log(this.courses);
     }
   }
 
