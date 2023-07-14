@@ -49,7 +49,6 @@ export class IntroFeedComponent {
         }
       });
       this.renderSomeStrings = true;
-      console.log(this.spanWithoutIterations);
     }
   }
 
