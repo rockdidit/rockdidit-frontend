@@ -7,8 +7,11 @@ import { AnimationService } from 'src/app/providers/animations/animation.service
   styleUrls: ['./contact-branch.component.scss'],
 })
 export class ContactBranchComponent implements OnInit {
-  constructor(private animationService: AnimationService) {}
+
+  constructor( private animationService: AnimationService) {
+  }
   ngOnInit(): void {
     this.animationService.scrollOpacityAnimation('fade-in-element');
   }
+
 }

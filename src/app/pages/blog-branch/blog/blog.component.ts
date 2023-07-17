@@ -1,3 +1,4 @@
+import { ContentInfoService } from './../../../services/content-service/content-info.service';
 import { Component } from '@angular/core';
 
 @Component({

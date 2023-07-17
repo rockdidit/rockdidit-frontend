@@ -5,6 +5,12 @@ type buysModel = {
   main_title: string | string[];
   span: string;
 };
+
+type eventsModelI = {
+  date: string[];
+  description: string;
+  title: string;
+};
 @Component({
   selector: 'app-upcoming-events',
   templateUrl: './upcoming-events.component.html',
@@ -25,23 +31,25 @@ export class UpcomingEventsComponent {
       this.buysArr[0].length > 0
     ) {
       const auxEvent = this.eventsArr[0];
+      this.events = [];
+      this.events = auxEvent
+        .filter((element: any, index: number) => index > 0)
+        .map((element: any) => {
+          if (typeof element.date === 'string') {
+            element.date = element.date.split(' ');
+          }
+          return element;
+        });
+
       const auxBuys = this.buysArr[0][0];
       this.buysElement = auxBuys;
-      if(typeof this.buysElement?.main_title === 'string'){
-        this.buysElement.main_title = this.buysElement.main_title.split(" ");
+      if (typeof this.buysElement?.main_title === 'string') {
+        this.buysElement.main_title = this.buysElement.main_title.split(' ');
       }
-      console.log(this.buysElement);
     }
   }
 
-  events: any[] = [
-    {
-      date: '14 SEP.',
-    },
-    {
-      date: '14 AUG.',
-    },
-  ];
+  events?: eventsModelI[];
 
   imgCarousel: any[] = [
     {

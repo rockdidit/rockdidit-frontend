@@ -15,8 +15,8 @@
       <div class="containerEvent mb-4 mt-4">
         <div class="container-fluid d-flex">
           <h3 class="font eventDate centerTitle mt-5">
-            {{ i.date }} <br />
-            2022
+            {{ i.date[0] }} {{i.date[1]}}<br />
+            {{i.date[2]}}
           </h3>
           <div class="vertical-line"></div>
           <hr
@@ -26,10 +26,9 @@
             width="200rem"
           />
           <div class="centerContentEvent EventTitleGoesHere">
-            <h4 class="font mt-3 textCenterEvent">EVENT TITLE GOES HERE</h4>
+            <h4 class="font mt-3 textCenterEvent">{{i.title}}</h4>
             <p class="text-center loremIpsum">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              {{i.description}}
             </p>
           </div>
           <div class="bookNowContainer selectors mt-4 me-5">

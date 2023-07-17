@@ -5,6 +5,7 @@ import { ContactBranchRoutingModule } from './contact-branch-routing.module';
 import { ContactBranchComponent } from './contact-branch.component';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     ContactBranchRoutingModule
   ],
   schemas: [

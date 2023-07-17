@@ -10,20 +10,16 @@
       <div class="containerContact">
         <div class="dataContact mt-5 ms-5">
           <div class="grid containerMargins">
-            <div class="row">
-              <h6 class="font">Location:</h6>
-              <p>450 NW Couch Street,</p>
-              <p>Portland, Oregon 97209</p>
-            </div>
-            <div class="row">
-              <h6 class="font">Email us:</h6>
-              <p>name@email.com</p>
-            </div>
-            <div class="row">
-              <h6 class="font">Call us:</h6>
-              <p>450 NW Couch Street,</p>
-              <p>Portland, Oregon 97209</p>
-            </div>
+            <ng-container *ngFor="let item of contactInformation">
+              <div class="row">
+                <h6 class="font">{{ item.title }}:</h6>
+                <p *ngIf="item.info.length === 2">{{ item.info[0] }},</p>
+                <p *ngIf="item.info.length === 2">
+                  {{ item.info[1] }}, {{ item.info[2] }}
+                </p>
+                <p *ngIf="item.info.length > 2">{{ item.info }}</p>
+              </div>
+            </ng-container>
           </div>
         </div>
       </div>
