@@ -53,17 +53,25 @@
           alt=""
         />
         <h4 class="font freeText">
-          GET 2 CHAPTERS <br />
-          FREE <br />
-          SIGN UP NOW
+          {{ (buysElement?.main_title)![0] }}
+          {{ (buysElement?.main_title)![1] }}
+          {{ (buysElement?.main_title)![3] }} <br />
+          {{ (buysElement?.main_title)![4] }} <br />
+          {{ (buysElement?.main_title)![5] }}
+          {{ (buysElement?.main_title)![6] }}
+          {{ (buysElement?.main_title)![7] }}
         </h4>
       </div>
     </div>
     <div class="inputsContainer">
       <div>
         <h4 class="font freeTextWeb">
-          GET 2 CHAPTERS FREE <br />
-          SIGN UP NOW
+          {{ (buysElement?.main_title)![0] }}
+          {{ (buysElement?.main_title)![1] }}
+          {{ (buysElement?.main_title)![2] }}
+          {{ (buysElement?.main_title)![3] }} <br />
+          {{ (buysElement?.main_title)![4] }}
+          {{ (buysElement?.main_title)![5] }}
         </h4>
       </div>
       <div>
@@ -98,7 +106,7 @@
                   src="../../../../assets/icons/rowRigthBlack.svg"
                   alt=""
                 />
-                <span class="font bookNowText">GET E-BOOK</span>
+                <span class="font bookNowText">{{ buysElement?.span }}</span>
               </button>
             </div>
           </div>
@@ -107,9 +115,7 @@
 
       <div class="bookConditionContainer mb-5">
         <p>
-          *By signing up for my free ebook, you’ll also be joining my mailing
-          list where I send my best tips helpful content and service offers. I
-          never sell your information and you can unsubscribe anytime.
+          {{ buysElement?.alert }}
         </p>
       </div>
     </div>

@@ -1,17 +1,37 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
+type buysModel = {
+  alert: string;
+  main_title: string | string[];
+  span: string;
+};
 @Component({
   selector: 'app-upcoming-events',
   templateUrl: './upcoming-events.component.html',
   styleUrls: ['./upcoming-events.component.scss'],
 })
-export class UpcomingEventsComponent implements OnInit{
+export class UpcomingEventsComponent {
   @Input() buysArr?: any[];
   @Input() eventsArr?: any[];
+  buysElement?: buysModel;
 
-  ngOnInit(): void {
-    // console.log(this.buysArr);
-    // console.log(this.eventsArr);
+  ngAfterContentChecked(): void {
+    if (
+      this.buysArr &&
+      this.eventsArr &&
+      this.buysArr[0] &&
+      this.eventsArr[0] &&
+      this.eventsArr[0].length > 0 &&
+      this.buysArr[0].length > 0
+    ) {
+      const auxEvent = this.eventsArr[0];
+      const auxBuys = this.buysArr[0][0];
+      this.buysElement = auxBuys;
+      if(typeof this.buysElement?.main_title === 'string'){
+        this.buysElement.main_title = this.buysElement.main_title.split(" ");
+      }
+      console.log(this.buysElement);
+    }
   }
 
   events: any[] = [
