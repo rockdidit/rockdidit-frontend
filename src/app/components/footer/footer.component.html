@@ -1,15 +1,11 @@
 <div class="container">
   <div class="containerImgs">
     <div class="displayImgs">
-      <div class="mb-5">
-        <img src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/WhatsApp_Image_2022-07-30_at_12.35.29_PM-removebg-preview.png?w=522&ssl=1" alt="">
-      </div>
-      <div class="mb-5">
-        <img src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/WhatsApp_Image_2022-07-30_at_12.35.30_PM__1_-removebg-preview.png?w=504&ssl=1" alt="">
-      </div>
-      <div class="mb-5">
-        <img src="https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/WhatsApp_Image_2022-07-30_at_12.35.30_PM-removebg-preview.png?w=500&ssl=1" alt="">
-      </div>
+      <ng-container *ngFor="let i of footerImgsInput">
+        <div class="mb-5">
+          <img [src]="i.url" alt="">
+        </div>
+      </ng-container>
     </div>
 
   </div>
