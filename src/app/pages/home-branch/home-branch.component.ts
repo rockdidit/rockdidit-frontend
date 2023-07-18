@@ -40,11 +40,27 @@ export class HomeBranchComponent implements OnInit {
   plansImgs: imgsResponseI[] = [];
 
   async ngOnInit() {
-    this.animationService.scrollOpacityAnimation('fade-in-element');
-    this.pushNecessaryComponentsInformation();
-    this.addCoursesImgsAndInputByComponent();
+    try{
+      this.animationService.scrollOpacityAnimation('fade-in-element');
+      this.pushNecessaryComponentsInformation();
+      this.addCoursesImgsAndInputByComponent();
+      this.addIntroductionImgArr();
+    } catch(err){
+      console.log(err);
+    }
   }
-
+  async addIntroductionImgArr(){
+    try{
+      for(let i of this.introductionImgIndex){
+        await this.contentInfoService.getWebImgs(i).then(async (res: any) => {
+          const response = await res.data.attributes;
+          this.introductionImgs.push(response);
+        })
+      }
+    } catch(err){
+      console.error(err);
+    }
+  }
 
 
   async pushNecessaryComponentsInformation(){

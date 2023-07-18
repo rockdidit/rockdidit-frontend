@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { imgsResponseI } from 'src/app/models/imgsResponseI';
 
 type introsModel = {
   title?: string;
@@ -20,36 +21,55 @@ type spanWithoutIterations = {
 })
 export class IntroFeedComponent {
   @Input() introArr?: any[];
+  @Input() introImgs?: imgsResponseI[];
 
   main_title?: string[] = [];
   renderSomeStrings: boolean = false;
 
   ngAfterContentChecked(): void {
-    if (this.introArr && this.introArr[0] && this.introArr[0].length > 0) {
-      this.main_title = this.introArr[0][0].main_title.split(' ');
-      this.introArr[0].forEach((item: object | any, index: number) => {
-        if (index >= 1 && index <= 3) {
-          this.intros[index - 1].title = item.title;
-          this.intros[index - 1].description = item.description;
-          if (item.subtitle) {
-            this.intros[index - 1].subtitle = item.subtitle;
+    this.obtainItemsForOnlyText();
+    this.obtainItemsForOnlyImgs();
+  }
+
+  obtainItemsForOnlyImgs() {
+    new Promise((resolve, reject) => {
+      resolve(this.introImgs);
+      if (this.introImgs && this.introImgs.length > 0) {
+        for (let i = 0; i < this.intros.length; i++) {
+          this.intros[i].img = this.introImgs[i].url;
+        }
+      }
+    });
+  }
+  obtainItemsForOnlyText() {
+    new Promise((resolve, reject) => {
+      resolve(this.introArr);
+      if (this.introArr && this.introArr[0] && this.introArr[0].length > 0) {
+        this.main_title = this.introArr[0][0].main_title.split(' ');
+        this.introArr[0].forEach((item: object | any, index: number) => {
+          if (index >= 1 && index <= 3) {
+            this.intros[index - 1].title = item.title;
+            this.intros[index - 1].description = item.description;
+            if (item.subtitle) {
+              this.intros[index - 1].subtitle = item.subtitle;
+            }
           }
-        }
-        if (index === 3) {
-          this.spanWithoutIterations[0].span = item.span;
-        } else if (index === 4) {
-          const aux = this.spanWithoutIterations[1];
-          aux.span = item.span;
-          aux.description = item.description;
-          aux.title = item.title;
-        } else if (index === 5) {
-          const aux = this.spanWithoutIterations[2];
-          aux.span = item.span;
-          aux.title = item.title.split(" ");
-        }
-      });
-      this.renderSomeStrings = true;
-    }
+          if (index === 3) {
+            this.spanWithoutIterations[0].span = item.span;
+          } else if (index === 4) {
+            const aux = this.spanWithoutIterations[1];
+            aux.span = item.span;
+            aux.description = item.description;
+            aux.title = item.title;
+          } else if (index === 5) {
+            const aux = this.spanWithoutIterations[2];
+            aux.span = item.span;
+            aux.title = item.title.split(' ');
+          }
+        });
+        this.renderSomeStrings = true;
+      }
+    });
   }
 
   spanWithoutIterations: spanWithoutIterations[] = [
@@ -71,18 +91,18 @@ export class IntroFeedComponent {
     {
       title: '',
       description: '',
-      img: 'https://f7.vamtam.com/wp-content/uploads/2020/12/iStock-1222239617.jpg',
+      img: '',
     },
     {
       title: '',
       description: '',
-      img: 'https://f7.vamtam.com/wp-content/uploads/2020/12/iStock-500284593.jpg',
+      img: '',
     },
     {
       title: '',
       description: '',
       subtitle: '',
-      img: 'https://f7.vamtam.com/wp-content/uploads/2020/12/iStock-1225346230.jpg',
+      img: '',
     },
   ];
 }
