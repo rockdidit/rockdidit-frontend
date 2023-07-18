@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-allcourses',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./allcourses.component.scss']
 })
 export class AllcoursesComponent {
-
+  @Input() imgMailBox?: string;
 }
