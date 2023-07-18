@@ -16,7 +16,7 @@ export class HomeBranchComponent implements OnInit {
     private contentInfoService: ContentInfoService
   ) {}
 
-  // imgs id's for courses, in order.
+  // imgs id's in order.
   idArr: number[] = [2, 1, 3, 4, 6, 5];
   courses: ProjectsI[] = [];
   coursesImgIndex: number[] = [11, 10, 9, 8];
@@ -29,7 +29,7 @@ export class HomeBranchComponent implements OnInit {
   projectsImgs: imgsResponseI[] = [];
   events: ProjectsI[] = [];
   eventsImgBookIndex: number[] = [2];
-  eventsImgsBook: imgsResponseI[] = [];
+  eventsImgsBook?: string;
   eventImgsCarouselIndex: number[] = [17, 18, 19, 20, 21, 22];
   eventImgsCarousel: imgsResponseI[] = [];
   buys: ProjectsI[] = [];
@@ -40,30 +40,64 @@ export class HomeBranchComponent implements OnInit {
   plansImgs: imgsResponseI[] = [];
 
   async ngOnInit() {
-    try{
+    try {
       this.animationService.scrollOpacityAnimation('fade-in-element');
-      this.pushNecessaryComponentsInformation();
-      this.addCoursesImgsAndInputByComponent();
-      this.addIntroductionImgArr();
-    } catch(err){
+      await this.pushNecessaryComponentsInformation();
+      await this.addCoursesImgsAndInputByComponent();
+      await this.addIntroductionImgArr();
+      await this.addProjImgs();
+      await this.addUpcomingEventsImgs();
+    } catch (err) {
       console.log(err);
     }
   }
-  async addIntroductionImgArr(){
-    try{
-      for(let i of this.introductionImgIndex){
-        await this.contentInfoService.getWebImgs(i).then(async (res: any) => {
-          const response = await res.data.attributes;
-          this.introductionImgs.push(response);
-        })
+
+  async addUpcomingEventsImgs() {
+    try {
+      for (let i of this.eventImgsCarouselIndex) {
+        await this.contentInfoService.getWebImgs(i).then((data: any) => {
+          const res = data.data.attributes;
+          this.eventImgsCarousel.push(res);
+        });
       }
-    } catch(err){
+      await this.contentInfoService
+        .getWebImgs(this.eventsImgBookIndex[0])
+        .then((data: any) => {
+          const res = data.data.attributes;
+          this.eventsImgsBook = res.url;
+        });
+    } catch (err) {
       console.error(err);
     }
   }
 
+  async addProjImgs() {
+    try {
+      for (let i of this.projectsImgIndex) {
+        await this.contentInfoService.getWebImgs(i).then(async (res: any) => {
+          const response = await res.data.attributes;
+          this.projectsImgs.push(response);
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
-  async pushNecessaryComponentsInformation(){
+  async addIntroductionImgArr() {
+    try {
+      for (let i of this.introductionImgIndex) {
+        await this.contentInfoService.getWebImgs(i).then(async (res: any) => {
+          const response = await res.data.attributes;
+          this.introductionImgs.push(response);
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async pushNecessaryComponentsInformation() {
     this.idArr.forEach(async (id, index) => {
       await this.contentInfoService
         .getWebSiteInformation(id)
@@ -78,7 +112,7 @@ export class HomeBranchComponent implements OnInit {
     });
   }
 
-  async addCoursesImgsAndInputByComponent(){
+  async addCoursesImgsAndInputByComponent() {
     for (const item of this.coursesImgIndex) {
       try {
         await this.contentInfoService.getWebImgs(item).then((response: any) => {

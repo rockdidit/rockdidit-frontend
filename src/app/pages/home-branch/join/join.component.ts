@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { imgsResponseI } from 'src/app/models/imgsResponseI';
 
 type passModel = {
   title: string;
@@ -14,12 +15,23 @@ type passModel = {
 })
 export class JoinComponent {
   @Input() plansArr?: any[];
+  @Input() plansImgs?: imgsResponseI[];
 
   passArr: passModel[] = [];
   main_title?: string[];
   followSpan: string[] = [];
+  offerSelected: boolean[] = [false, false, false];
 
   ngAfterContentChecked() {
+    this.processAndSortPlansArray();
+    this.processAndSortImages();
+  }
+
+  processAndSortImages(){
+
+  }
+
+  processAndSortPlansArray(){
     if (this.plansArr && this.plansArr[0] && this.plansArr[0].length > 0) {
       const planAux = this.plansArr[0];
       this.main_title = planAux[0].main_title.split(' ');
@@ -33,7 +45,6 @@ export class JoinComponent {
     }
   }
 
-  offerSelected: boolean[] = [false, false, false];
 
   selectOffer(index: number) {
     this.offerSelected = this.offerSelected.map(() => false);

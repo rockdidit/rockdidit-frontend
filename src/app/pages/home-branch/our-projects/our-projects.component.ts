@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { imgsResponseI } from 'src/app/models/imgsResponseI';
 type projectsModel = {
   img: string;
   title: string;
@@ -12,35 +13,56 @@ type projectsModel = {
 })
 export class OurProjectsComponent {
   @Input() projArr?: any[];
+  @Input() projImgs?: imgsResponseI[];
   main_title?: string;
 
   ngAfterContentChecked(): void {
-    if (this.projArr && this.projArr[0] && this.projArr.length > 0) {
-      const auxProj = this.projArr[0];
-      auxProj.forEach((item: any, index: number) => {
-        if (index === 0) {
-          this.main_title = item.main_title;
-        } else if(index > 0){
-          this.projects[index - 1].title = item.title;
-          this.projects[index - 1].detail = item.detail;
+    this.placementOfTextOfProjArr();
+    this.placementOfImgsOfProjImgs();
+  }
+
+  placementOfImgsOfProjImgs() {
+    new Promise((resolve, reject) => {
+      resolve(this.projImgs);
+      resolve(this.projArr);
+      if (this.projects && this.projImgs && this.projImgs.length > 0) {
+        for (let i = 0; i < this.projects.length; i++) {
+          this.projects[i].img = this.projImgs[i].url;
         }
-      });
-    }
+      }
+    });
+  }
+
+  placementOfTextOfProjArr() {
+    new Promise((resolve, reject) => {
+      resolve(this.projArr);
+      if (this.projArr && this.projArr[0] && this.projArr.length > 0) {
+        const auxProj = this.projArr[0];
+        auxProj.forEach((item: any, index: number) => {
+          if (index === 0) {
+            this.main_title = item.main_title;
+          } else if (index > 0) {
+            this.projects[index - 1].title = item.title;
+            this.projects[index - 1].detail = item.detail;
+          }
+        });
+      }
+    });
   }
 
   projects: projectsModel[] = [
     {
-      img: 'https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/pexels-photo-1793035.jpeg?fit=1125%2C750&ssl=1',
+      img: '',
       title: '',
       detail: '',
     },
     {
-      img: 'https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/2fd4959c-b1ba-4bdc-b260-efbe2bbef135_image_jpeg.png?fit=800%2C800&ssl=1',
+      img: '',
       title: '',
       detail: '',
     },
     {
-      img: 'https://i0.wp.com/rockdidit.com/wp-content/uploads/2022/07/pexels-cottonbro-4761792-scaled.jpg?fit=1710%2C2560&ssl=1',
+      img: '',
       title: '',
       detail: '',
     },
