@@ -15,6 +15,7 @@ export class OurProjectsBranchComponent implements OnInit {
   ) {}
 
   dataBranch?: any;
+  imgIndex: number[] = [ 3, 4, 23]
 
   headerIntroInfo: ProjectsI = {
     main_title: '',
@@ -25,6 +26,7 @@ export class OurProjectsBranchComponent implements OnInit {
     title: '',
     description: '',
   };
+
 
   naturalHerbsMinerals: ProjectsI = {
     titleArr: [],

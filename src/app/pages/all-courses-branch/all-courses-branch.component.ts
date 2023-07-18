@@ -9,6 +9,8 @@ import { AnimationService } from 'src/app/providers/animations/animation.service
 export class AllCoursesBranchComponent implements OnInit {
   constructor(private animationService: AnimationService){
   }
+  imgIndex: number[] = [24];
+
   ngOnInit(): void {
     this.animationService.scrollOpacityAnimation('fade-in-element')
   }

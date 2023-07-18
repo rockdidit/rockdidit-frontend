@@ -10,7 +10,7 @@ import ls from 'localstorage-slim';
 export class MainService {
   header: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   /**
    * This function calls the backend to get all the objects from a specific route.

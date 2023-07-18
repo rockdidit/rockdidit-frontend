@@ -1,13 +1,20 @@
 import { ContentInfoService } from './../../../services/content-service/content-info.service';
 import { Component } from '@angular/core';
 
+type blogsType = {
+  title: string;
+  date: string;
+  text: string;
+};
+
+
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent {
-  blogsArrs: any[] = [
+  blogsArrs: blogsType[] = [
     {
       title: 'Türkiye’nin En İyi Online Bahis Şirketi',
       date: 'May 8, 2023',

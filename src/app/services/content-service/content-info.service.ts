@@ -10,6 +10,19 @@ export class ContentInfoService {
     private mainService: MainService
   ) { }
 
+    getWebImgs(id?: number | string){
+      return new Promise((resolve, reject) => {
+        this.mainService.getInfoComponents(`website-medias/${id ? id : ''}`).subscribe(
+          (response: any) => {
+            resolve(response);
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+      });
+    }
+
   getWebSiteInformation(id?: number | string) {
     return new Promise((resolve, reject) => {
       this.mainService.getInfoComponents(`website-contents/${id ? id : ''}`).subscribe(

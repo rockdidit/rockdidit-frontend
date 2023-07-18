@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rockdidit';
+  // footer imgs arrays 5 6 7
 }
