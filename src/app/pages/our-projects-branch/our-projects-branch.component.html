@@ -5,19 +5,22 @@
     class="fade-in-element"
   ></app-header-intro>
   <app-i-did-it
+    [iDidItImg]="iDidItImg"
     [title]="iDidIt.title"
     [description]="iDidIt.description"
     class="fade-in-element"
   ></app-i-did-it>
   <app-natural-herb-mineral
+    [naturalHerbMineralsImg]="naturalHerbMineralsImg"
     [titleArr]="naturalHerbsMinerals.titleArr"
     [description]="naturalHerbsMinerals.description"
     class="fade-in-element"
   ></app-natural-herb-mineral>
   <app-cutting
+    [cuttingImg]="cuttingImg"
     [title]="cutting.title"
     [description]="cutting.description"
     class="fade-in-element"
   ></app-cutting>
-  <app-upcoming-events class="fade-in-element"></app-upcoming-events>
+  <app-upcoming-events [obtainBookImg]="obtainBookImg" class="fade-in-element"></app-upcoming-events>
 </div>

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class NaturalHerbMineralComponent {
   @Input() titleArr?: string[] = [];
   @Input() description?: string = '';
+  @Input() naturalHerbMineralsImg?: string;
 }

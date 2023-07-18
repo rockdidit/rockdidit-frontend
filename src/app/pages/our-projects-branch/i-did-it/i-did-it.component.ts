@@ -9,5 +9,6 @@ export class IDidItComponent {
 
   @Input() title?: string = '';
   @Input() description?: string = '';
+  @Input() iDidItImg?: string;
 
 }
