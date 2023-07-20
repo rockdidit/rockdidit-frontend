@@ -112,9 +112,9 @@
         </div>
       </div>
 
-      <div class="bookConditionContainer mb-5">
+      <div *ngIf="buysElement" class="bookConditionContainer mb-5">
         <p>
-          {{ buysElement?.alert }}
+          {{ buysElement.alert }}
         </p>
       </div>
     </div>

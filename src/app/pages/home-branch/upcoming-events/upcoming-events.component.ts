@@ -28,10 +28,10 @@ export class UpcomingEventsComponent {
   imgBook?: string;
 
   ngAfterContentInit(): void {
-    this.getAndSortArrangementsForText();
     this.getAndSortArrangementsForCarouselImgs();
   }
   ngAfterContentChecked() {
+    this.getAndSortArrangementsForText();
     this.getAndSortArrangementsForbookImg();
   }
 
