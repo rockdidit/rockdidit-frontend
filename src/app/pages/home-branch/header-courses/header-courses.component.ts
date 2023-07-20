@@ -16,11 +16,16 @@ export class HeaderCoursesComponent implements OnInit {
   @Input() coursesImgs?: imgsResponseI[];
   main_title?: string[];
   courses: coursesInfo[] = [];
-  ngOnInit(): void {}
 
-  ngDoCheck() {
-    this.addMainTitleInformation();
-    this.addImgsAndCoursesInfo();
+  async ngOnInit() {
+    try{
+      await new Promise<void>((resolve, reject) => setTimeout(resolve, 1000));
+      await this.addMainTitleInformation();
+      await new Promise<void>((resolve, reject) => setTimeout(resolve, 1000));
+      await this.addImgsAndCoursesInfo();
+    } catch(e){
+      console.error(e);
+    }
   }
 
   async addImgsAndCoursesInfo() {
