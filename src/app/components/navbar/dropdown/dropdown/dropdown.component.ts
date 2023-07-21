@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { AnimationService } from 'src/app/providers/animations/animation.service';
+
+type dropDownItems = {
+  title: string;
+  childrens?: string[];
+  route?: string[];
+};
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
-  providers: [ AnimationService]
+  providers: [AnimationService],
 })
 export class DropdownComponent {
-  constructor(private animationService: AnimationService){
-
-  }
+  constructor(private animationService: AnimationService) {}
   collapsedSections: string[] = [];
 
   toggleCollapse(sectionId: string) {
@@ -20,39 +24,31 @@ export class DropdownComponent {
     return this.animationService.isCollapsed(sectionId);
   }
 
-  dropDownItemsChildren: any[] = [
+  dropDownItemsChildren: dropDownItems[] = [
     {
       title: 'Home',
-      childrens: ['Home', 'Personal Trainer'],
+      childrens: ['Home'],
+      route: ['/'],
     },
     {
-      title: 'Classes',
-      childrens: [
-        'Outdoor Classes',
-        'E-BOOk Updated',
-        'Conference Calls',
-        'Personal Training',
-        'View All',
-      ],
+      title: 'All Courses',
+      childrens: ['All Courses'],
+      route: ['/all-courses'],
     },
     {
-      title: 'Membership',
+      title: 'Our projects',
+      childrens: ['Our Projects'],
+      route: ['/our-projects'],
     },
     {
-      title: 'About',
-      childrens: [
-        'F7 Club',
-        'Team',
-        'Reviews',
-        'Contact',
-        'Schedules',
-        'Covid-19',
-      ],
+      title: 'Blog',
+      childrens: ['Blog'],
+      route: ['/blog'],
     },
     {
-      title: 'Community',
-      childrens: ['Blog', 'Our Projects'],
+      title: 'Contact',
+      childrens: ['Contact'],
+      route: ['/contact'],
     },
-    { title: 'Shop' },
   ];
 }

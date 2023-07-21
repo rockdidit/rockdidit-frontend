@@ -23,7 +23,7 @@
           [class.multi-collapse]="isCollapsed(item.title)"
         >
           <ul>
-            <li class="textTransitionColor" *ngFor="let i of item.childrens">
+            <li [routerLink]="item.route" class="textTransitionColor" *ngFor="let i of item.childrens">
               <span>{{ i }}</span>
             </li>
           </ul>
