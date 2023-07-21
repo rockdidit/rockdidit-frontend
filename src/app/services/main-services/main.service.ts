@@ -102,7 +102,6 @@ export class MainService {
   setLocalStorageToken(keyValue: string, value: string){
     ls.set(keyValue, value);
     const result = ls.get(keyValue);
-    console.log(result);
     return;
   }
 

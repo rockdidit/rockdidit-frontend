@@ -30,7 +30,6 @@ export class HomeBranchServiceService {
     return new Promise((resolve, reject) => {
       this.mainService.post(`auth/local/register`, registerUser).subscribe(
         (response: any) => {
-          console.log(response as any);
           const res = response as any;
           const tokenId = res.jwt as string;
           this.mainService.setLocalStorageToken('id_token', tokenId);
@@ -47,7 +46,6 @@ export class HomeBranchServiceService {
     return new Promise<any[]>((resolve, reject) => {
       this.mainService.post(`auth/local`, loginParams).subscribe(
         (response: any) => {
-          console.log(response as any);
           const res = response as any;
           const tokenId = res.jwt as string;
           this.mainService.setLocalStorageToken('id_token', tokenId);

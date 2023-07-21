@@ -48,7 +48,7 @@ export class HomeBranchComponent implements OnInit {
       await this.addProjImgs();
       await this.addUpcomingEventsImgs();
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   }
 

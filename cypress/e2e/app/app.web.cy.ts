@@ -1,8 +1,8 @@
-describe('App testing components', () => {
+describe('App testing components web version', () => {
   beforeEach(() => {
     cy.visit('/');
   });
-  it('NavBarComponent navigation routes', () => {
+  it('NavBarComponent navigation routes in web version', () => {
     cy.get('[routerlink="/all-courses"]').click();
     cy.url().should('eq', 'http://localhost:4200/all-courses');
 

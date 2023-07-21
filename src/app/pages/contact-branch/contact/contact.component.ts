@@ -22,8 +22,6 @@ export class ContactComponent {
         }
       } catch (err) {
         console.error(err);
-      } finally {
-        console.log(this.contactInformation);
       }
     });
   }

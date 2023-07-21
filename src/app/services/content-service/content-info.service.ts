@@ -27,7 +27,6 @@ export class ContentInfoService {
     return new Promise((resolve, reject) => {
       this.mainService.getInfoComponents(`website-contents/${id ? id : ''}`).subscribe(
         (response: any) => {
-          // console.log(response as any);
           resolve(response);
         },
         (error) => {
