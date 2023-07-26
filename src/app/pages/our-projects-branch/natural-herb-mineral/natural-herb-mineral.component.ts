@@ -9,4 +9,6 @@ export class NaturalHerbMineralComponent {
   @Input() titleArr?: string[] = [];
   @Input() description?: string = '';
   @Input() naturalHerbMineralsImg?: string;
+  @Input() blackArrowToTheRight?: string;
+  @Input() diagonalArrowToTheRight?: string;
 }

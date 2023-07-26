@@ -1,20 +1,25 @@
 <div class="marginTopForComponentsWithNav">
   <app-header-courses
+    [arrowToTheRight]="arrowToTheRight"
     [coursesArr]="courses"
     [coursesImgs]="coursesImgs"
     class="fade-in-element mt-5"
   ></app-header-courses>
   <app-intro-feed
+    [arrowToTheRight]="arrowToTheRight"
     [introArr]="introduction"
     [introImgs]="introductionImgs"
     class="fade-in-element"
   ></app-intro-feed>
   <app-our-projects
+    [arrowToTheRight]="arrowToTheRight"
     [projArr]="projects"
     [projImgs]="projectsImgs"
     class="fade-in-element"
   ></app-our-projects>
   <app-upcoming-events
+    [blackArrowToTheRight]="blackArrowToTheRight"
+    [diagonalArrowToTheRight]="diagonalArrowToTheRight"
     [buysArr]="buys"
     [eventsArr]="events"
     [eventsImgsBook]="eventsImgsBook"
@@ -22,6 +27,8 @@
     class="fade-in-element"
   ></app-upcoming-events>
   <app-join
+    [blackArrowToTheRight]="blackArrowToTheRight"
+    [runningMan]="runningMan"
     [plansArr]="plans"
     class="fade-in-element"
   ></app-join>

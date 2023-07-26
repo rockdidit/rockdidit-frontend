@@ -14,6 +14,7 @@ type coursesInfo = {
 export class HeaderCoursesComponent implements OnInit {
   @Input() coursesArr?: ProjectsI[];
   @Input() coursesImgs?: imgsResponseI[];
+  @Input() arrowToTheRight?: string;
   main_title?: string[];
   courses: coursesInfo[] = [];
 

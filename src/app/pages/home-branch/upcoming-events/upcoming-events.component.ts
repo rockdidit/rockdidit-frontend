@@ -22,6 +22,8 @@ export class UpcomingEventsComponent {
   @Input() eventsArr?: any[];
   @Input() eventImgsCarousel?: imgsResponseI[];
   @Input() eventsImgsBook?: string;
+  @Input() diagonalArrowToTheRight?: string;
+  @Input() blackArrowToTheRight?: string;
   buysElement?: buysModel;
   events?: eventsModelI[];
   imgCarousel?: any[];
@@ -36,7 +38,7 @@ export class UpcomingEventsComponent {
   }
 
   getAndSortArrangementsForbookImg() {
-    new Promise((resolve, reject) => {
+    new Promise( (resolve, reject) => {
       resolve(this.imgBook);
       this.imgBook = this.eventsImgsBook;
     });

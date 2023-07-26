@@ -14,6 +14,7 @@ type projectsModel = {
 export class OurProjectsComponent {
   @Input() projArr?: any[];
   @Input() projImgs?: imgsResponseI[];
+  @Input() arrowToTheRight?: string;
   main_title?: string;
 
   ngAfterContentChecked(): void {

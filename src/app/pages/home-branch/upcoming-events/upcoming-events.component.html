@@ -1,7 +1,7 @@
 <div>
   <div class="titleContainer">
     <div class="icon-span">
-      <img class="icon" src="../../../../assets/icons/row45.svg" alt="" />
+      <img class="icon" [src]="diagonalArrowToTheRight" alt="" />
     </div>
     <div class="boxTitle">
       <h1 class="titleText">
@@ -34,7 +34,7 @@
           <div class="bookNowContainer selectors mt-4 me-5">
             <img
               class="bookNowIcon"
-              src="../../../../assets/icons/rowRigthBlack.svg"
+              [src]="blackArrowToTheRight"
               alt=""
             />
             <span class="font bookNowText">BOOK NOW</span>
@@ -102,7 +102,7 @@
               <button class="btn registerForFreeBook" type="button">
                 <img
                   class="bookNowIcon"
-                  src="../../../../assets/icons/rowRigthBlack.svg"
+                  [src]="blackArrowToTheRight"
                   alt=""
                 />
                 <span class="font bookNowText">{{ buysElement?.span }}</span>

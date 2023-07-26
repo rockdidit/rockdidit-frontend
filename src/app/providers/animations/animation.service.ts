@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AnimationService {
-
-  constructor() { }
-
+  constructor() {}
   collapsedSections: string[] = [];
-
   toggleCollapse(sectionId: string) {
     if (this.isCollapsed(sectionId)) {
       this.collapsedSections = this.collapsedSections.filter(
@@ -23,7 +20,7 @@ export class AnimationService {
     return this.collapsedSections.includes(sectionId);
   }
 
-  scrollOpacityAnimation(className: string){
+  scrollOpacityAnimation(className: string) {
     const options = {
       threshold: 0.1,
     };
@@ -45,5 +42,4 @@ export class AnimationService {
     const element = document.getElementById('toggleContainer');
     element!.classList.toggle('active');
   }
-
 }

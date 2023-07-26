@@ -4,7 +4,6 @@
 
   .logo {
     width: 10rem;
-    // height: 4rem;
   }
 }
 
@@ -29,10 +28,16 @@
 
 .carShop {
   cursor: pointer;
-  width: 2rem !important;
+  img {
+    width: 2rem !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .carShop{
+    display: none !important;
+
+  }
   .containerWeb {
     display: none;
   }

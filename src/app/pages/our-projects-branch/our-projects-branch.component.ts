@@ -13,10 +13,9 @@ export class OurProjectsBranchComponent implements OnInit {
     private animationService: AnimationService,
     private contentInfoService: ContentInfoService
   ) {}
-
   dataBranch?: any;
-  imgIndex: number[] = [3, 4, 23];
-
+  diagonalArrowToTheRight?: string;
+  blackArrowToTheRight?: string;
   headerIntroInfo: ProjectsI = {
     main_title: '',
     description: '',
@@ -59,30 +58,52 @@ export class OurProjectsBranchComponent implements OnInit {
     });
   }
 
-  obtainBookImgAndLogic(){
+  async getDiagonalArrowToTheRight(): Promise<void> {
+    await this.contentInfoService.getWebImgs(27).then(async (res: any) => {
+      await new Promise(async (resolve) => {
+        resolve(await res);
+        const img = await res.data.attributes.url;
+        this.diagonalArrowToTheRight = await img;
+      });
+    });
+  }
+
+  async getBlackArrowToTheRigth(): Promise<void> {
+    await this.contentInfoService.getWebImgs(28).then(async (res: any) => {
+      await new Promise(async (resolve) => {
+        resolve(await res);
+        const img = await res.data.attributes.url;
+        this.blackArrowToTheRight = await img;
+      });
+    });
+  }
+
+  obtainBookImgAndLogic() {
     this.contentInfoService.getWebImgs(2).then((res: any) => {
       const response = res.data.attributes.url;
       new Promise((resolve, reject) => {
-        resolve(res)
+        resolve(res);
         this.obtainBookImg = response;
-      })
-    })
+      });
+    });
   }
-  obtainAndExportImgs(){
-    for(let i = 0 ; i < this.imgIndex.length ; i ++){
-      this.contentInfoService.getWebImgs(this.imgIndex[i]).then((imgs: any) => {
+
+  obtainAndExportImgs() {
+    let imgIndex = [3, 4, 23];
+    for (let i = 0; i < imgIndex.length; i++) {
+      this.contentInfoService.getWebImgs(imgIndex[i]).then((imgs: any) => {
         new Promise((resolve, reject) => {
           resolve(imgs);
           const response = imgs.data.attributes.url;
-          if(this.imgIndex[i] === 3){
+          if (imgIndex[i] === 3) {
             this.iDidItImg = response;
-          } else if( this.imgIndex[i] === 4){
+          } else if (imgIndex[i] === 4) {
             this.naturalHerbMineralsImg = response;
-          } else if(this.imgIndex[i] ===23){
+          } else if (imgIndex[i] === 23) {
             this.cuttingImg = response;
           }
-        })
-      })
+        });
+      });
     }
   }
 
@@ -91,5 +112,7 @@ export class OurProjectsBranchComponent implements OnInit {
     this.getAndSortArraysforText();
     this.obtainAndExportImgs();
     this.obtainBookImgAndLogic();
+    this.getBlackArrowToTheRigth();
+    this.getDiagonalArrowToTheRight();
   }
 }

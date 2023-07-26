@@ -6,7 +6,7 @@
       {{ main_title![2] }} {{ main_title![3] }}
     </h1>
     <div class="icon-thick">
-      <img src="../../../../assets/icons/rightRow.svg" alt="" />
+      <img [src]="arrowToTheRight" alt="" />
     </div>
   </div>
   <ng-container *ngFor="let item of intros">
@@ -32,7 +32,7 @@
   <div class="d-flex ms-5 mb-5">
     <img
       class="imgRowForSelects"
-      src="../../../../assets/icons/rightRow.svg"
+      [src]="arrowToTheRight"
       alt=""
     />
     <p class="ms-4 AboutUs" *ngIf="renderSomeStrings">
@@ -111,7 +111,7 @@
           {{ main_title![2] }} {{ main_title![3] }}
         </h1>
         <div class="icon-thick">
-          <img src="../../../../assets/icons/rightRow.svg" alt="" />
+          <img [src]="arrowToTheRight" alt="" />
         </div>
       </div>
       <div class="row">

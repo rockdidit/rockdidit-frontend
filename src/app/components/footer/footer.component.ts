@@ -8,12 +8,13 @@ import { imgsResponseI } from 'src/app/models/imgsResponseI';
 })
 export class FooterComponent{
   @Input() footerImgsInput?: imgsResponseI[];
+  @Input() footerLogo?: string;
   constructor(){
   }
 
   ngAfterContentChecked() {
     new Promise((resolve) => {
-      resolve(this.footerImgsInput);
+      resolve(this.footerImgsInput && this.footerLogo);
     })
   }
 }

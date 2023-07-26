@@ -10,4 +10,5 @@ export class UpcomingEventsComponent {
   @Input() titleArr: string[] = [];
   @Input() decription: string = "";
   @Input() obtainBookImg?: string;
+  @Input() blackArrowToTheRight?: string;
 }

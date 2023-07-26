@@ -7,7 +7,8 @@ import { ContentInfoService } from 'src/app/services/content-service/content-inf
 export class AppProvider {
   constructor(public contentInfoService: ContentInfoService) {}
 
-  getFooterImgs(footerImgsIndex: number[], footerImgsInput: imgsResponseI[]) {
+  getFooterImgs(footerImgsInput: imgsResponseI[]) {
+    let footerImgsIndex = [5, 6, 7];
     try {
       for (let i of footerImgsIndex) {
         this.contentInfoService.getWebImgs(i).then((res: any) => {

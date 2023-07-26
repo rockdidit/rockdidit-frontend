@@ -22,6 +22,7 @@ type spanWithoutIterations = {
 export class IntroFeedComponent {
   @Input() introArr?: any[];
   @Input() introImgs?: imgsResponseI[];
+  @Input() arrowToTheRight?: string;
 
   main_title?: string[] = [];
   renderSomeStrings: boolean = false;

@@ -11,6 +11,7 @@
       </div>
       <div class="containerButton">
         <app-visit-project-button
+          [blackArrowToTheRight]="blackArrowToTheRight"
           buttonContent="VISIT PROJECT"
         ></app-visit-project-button>
       </div>
@@ -25,10 +26,11 @@
   <div class="containerEnrollComplete">
     <div class="containerEnroll">
       <div class="containerOnlyRow">
-        <img src="../../../../assets/4. 290x290px.svg" alt="">
+        <img [src]="diagonalArrowToTheRight" alt="">
       </div>
       <div class="enrollNow">
         <app-visit-project-button
+          [blackArrowToTheRight]="blackArrowToTheRight"
           buttonContent="ENROLL NOW"
         ></app-visit-project-button>
       </div>

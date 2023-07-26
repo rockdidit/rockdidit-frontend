@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ContentInfoService } from 'src/app/services/content-service/content-info.service';
 type contactInformation = {
   info: string[] | string;
@@ -10,7 +10,9 @@ type contactInformation = {
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  diagonalArrowToTheRight?: string;
   contactInformation?: Array<contactInformation>;
+  whiteArrowToTheRigth?: string;
 
   constructor(private contentInfoService: ContentInfoService) {
     this.contactInformation;
@@ -24,7 +26,30 @@ export class ContactComponent {
         console.error(err);
       }
     });
+    this.getDiagonalArrowToTheRight();
+    this.getWhiteArrowToTheRight();
   }
+
+  async getWhiteArrowToTheRight(): Promise<void> {
+    await this.contentInfoService.getWebImgs(30).then(async (res: any) => {
+      await new Promise(async (resolve) => {
+        resolve(await res);
+        const img = await res.data.attributes.url;
+        this.whiteArrowToTheRigth = await img;
+      });
+    });
+  }
+
+  async getDiagonalArrowToTheRight(): Promise<void> {
+    await this.contentInfoService.getWebImgs(27).then(async (res: any) => {
+      await new Promise(async (resolve) => {
+        resolve(await res);
+        const img = await res.data.attributes.url;
+        this.diagonalArrowToTheRight = await img;
+      });
+    });
+  }
+
   ngAfterContentChecked(): void {
     if (this.contactInformation && this.contactInformation.length > 0) {
       this.contactInformation?.filter(

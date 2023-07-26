@@ -9,4 +9,7 @@ export class CuttingComponent {
   @Input() title?: string = '';
   @Input() description?: string = '';
   @Input() cuttingImg?: string;
+  @Input() blackArrowToTheRight?: string;
+  @Input() diagonalArrowToTheRight?: string;
+
 }

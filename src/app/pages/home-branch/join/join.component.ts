@@ -16,6 +16,8 @@ type passModel = {
 export class JoinComponent {
   @Input() plansArr?: any[];
   @Input() plansImgs?: imgsResponseI[];
+  @Input() runningMan?: string;
+  @Input() blackArrowToTheRight?: string;
 
   passArr: passModel[] = [];
   main_title?: string[];
@@ -24,11 +26,6 @@ export class JoinComponent {
 
   ngAfterContentChecked() {
     this.processAndSortPlansArray();
-    this.processAndSortImages();
-  }
-
-  processAndSortImages(){
-
   }
 
   processAndSortPlansArray(){

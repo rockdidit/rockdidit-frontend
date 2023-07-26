@@ -1,10 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img
-        class="logo"
-        src="./../../../assets/VARIACIONES LOGO PÁGINA WEB.svg"
-      />
+      <img class="logo" [src]="logo" />
     </a>
     <div class="navbar-collapse justify-content-center containerWeb">
       <ul class="navbar-nav selectors">
@@ -32,14 +29,19 @@
       <img src="../../../assets/rightRow.svg" alt="" />
       <span class="enrollNow font containerWeb">ENROLL NOW</span>
     </div>
-    <div class="d-flex align-items-center containerWeb">
+    <div class="d-flex align-items-center carShop">
       <img
-        class="containerWeb carShop ms-5 me-5"
-        src="../../../assets/carShop.svg"
+        *ngIf="carShopRenderBool"
+        class="ms-5 me-5"
+        [src]="carShopImg"
         alt=""
       />
     </div>
-    <span (click)="toggleAnimation()" id="btnToggle" class="material-symbols-outlined menuButtonMobile">
+    <span
+      (click)="toggleAnimation()"
+      id="btnToggle"
+      class="material-symbols-outlined menuButtonMobile"
+    >
       drag_handle
     </span>
   </div>
@@ -47,5 +49,3 @@
 <div id="toggleContainer">
   <app-dropdown></app-dropdown>
 </div>
-
-

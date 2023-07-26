@@ -12,17 +12,20 @@ export class AllCoursesBranchComponent implements OnInit {
     private animationService: AnimationService,
     private contentInfoService: ContentInfoService
   ) {}
-  imgIndex: number[] = [24];
+  readonly imgIndex: number[] = [24];
   imgMailBox?: string;
 
+  getWebImgs(){
+    this.contentInfoService.getWebImgs(this.imgIndex[0]).then((item: any) => {
+      new Promise((resolve) => {
+        resolve(item);
+        const img = item.data.attributes.url;
+        this.imgMailBox = img;
+      })
+    })
+  }
   ngOnInit(): void {
     this.animationService.scrollOpacityAnimation('fade-in-element');
-      this.contentInfoService.getWebImgs(this.imgIndex[0]).then((item: any) => {
-        new Promise((resolve) => {
-          resolve(item);
-          const img = item.data.attributes.url;
-          this.imgMailBox = img;
-        })
-      })
+    this.getWebImgs();
   }
 }

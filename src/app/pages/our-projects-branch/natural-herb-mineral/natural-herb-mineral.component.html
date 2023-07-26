@@ -2,7 +2,7 @@
   <div class="containerDisplay">
     <div class="containerWeb">
       <div class="containerOnlyRow">
-        <img src="../../../../assets/4. 290x290px.svg" alt="" />
+        <img [src]="diagonalArrowToTheRight" alt="" />
       </div>
       <div class="titleContainer">
         <ng-template #elseTitleArr> Cargando... </ng-template>
@@ -28,6 +28,7 @@
         </div>
         <div class="containerButton">
           <app-visit-project-button
+            [blackArrowToTheRight]="blackArrowToTheRight"
             buttonContent="VISIT PROJECT"
           ></app-visit-project-button>
         </div>

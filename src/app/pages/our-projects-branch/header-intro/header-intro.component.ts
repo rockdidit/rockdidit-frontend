@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class HeaderIntroComponent {
   @Input() main_title?: string = '';
   @Input() description?: string = '';
+  @Input() diagonalArrowToTheRight?: string;
 }
