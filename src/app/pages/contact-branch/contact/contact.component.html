@@ -1,0 +1,78 @@
+<div class="boxGeneral marginTopForComponentsWithNav">
+  <div>
+    <div class="containerTitle">
+      <h1 class="font">CONTACT</h1>
+    </div>
+    <div class="containerImg">
+      <img class="imgRow" [src]="diagonalArrowToTheRight" alt="" />
+    </div>
+    <div class="containerDisplay">
+      <div class="containerContact">
+        <div class="dataContact mt-5 ms-5">
+          <div class="grid containerMargins">
+            <ng-container *ngFor="let item of contactInformation">
+              <div class="row">
+                <h6 class="font">{{ item.title }}:</h6>
+                <p *ngIf="item.info.length === 2">{{ item.info[0] }},</p>
+                <p *ngIf="item.info.length === 2">
+                  {{ item.info[1] }}, {{ item.info[2] }}
+                </p>
+                <p *ngIf="item.info.length > 2">{{ item.info }}</p>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="containerBackGround">
+      <div class="containerTitleForm">
+        <h6 class="font">Send us a message:</h6>
+      </div>
+      <div class="displayCenter">
+        <div class="containerForm">
+          <div class="containerThreeDivs row">
+            <div class="input-group col-lg">
+              <input
+                placeholder="Your name"
+                type="text"
+                class="form-control inputStyle inputBug"
+                id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4"
+              />
+            </div>
+            <div class="input-group col-lg">
+              <input
+                placeholder="example@gmail.com"
+                type="text"
+                class="form-control inputStyle inputBug"
+                id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4"
+              />
+            </div>
+            <div class="input-group col-lg">
+              <input
+                placeholder="Enter subject"
+                type="text"
+                class="form-control inputStyle inputBug"
+                id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <textarea
+              placeholder="Your Message"
+              class="form-control"
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="contianerButton">
+        <img [src]="whiteArrowToTheRigth" alt="" />
+        <label class="font labelSend"> SEND NOW </label>
+      </div>
+    </div>
+    <app-map></app-map>
+  </div>
+</div>

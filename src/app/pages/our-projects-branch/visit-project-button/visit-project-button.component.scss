@@ -1,0 +1,35 @@
+$color: #c7e902;
+
+.btn {
+  background-color: #c7e902;
+  border-radius: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+    p{
+      margin-top: 0.3rem;
+    }
+  }
+}
+// .containerButton{
+//   width: 100%;
+//   margin: auto;
+//   display: flex;
+//   justify-content: start;
+// }
+
+.font {
+  font-family: "Poppins", sans-serif;
+}
+
+img{
+  width: 2rem;
+  margin-top: -1rem;
+  margin-right: 1rem;
+}

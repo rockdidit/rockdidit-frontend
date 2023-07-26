@@ -1,0 +1,145 @@
+<div>
+  <div class="titleContainer">
+    <div class="icon-span">
+      <img class="icon" [src]="diagonalArrowToTheRight" alt="" />
+    </div>
+    <div class="boxTitle">
+      <h1 class="titleText">
+        UPCOMING <br />
+        EVENTS
+      </h1>
+    </div>
+  </div>
+  <ng-container class="boxFlex" *ngFor="let i of events">
+    <div class="centerContainer">
+      <div class="containerEvent mb-4 mt-4">
+        <div class="container-fluid d-flex">
+          <h3 class="font eventDate centerTitle mt-5">
+            {{ i.date[0] }} {{i.date[1]}}<br />
+            {{i.date[2]}}
+          </h3>
+          <div class="vertical-line"></div>
+          <hr
+            class="centerTitle displayWeb mt-3"
+            color="black"
+            size="5"
+            width="200rem"
+          />
+          <div class="centerContentEvent EventTitleGoesHere">
+            <h4 class="font mt-3 textCenterEvent">{{i.title}}</h4>
+            <p class="text-center loremIpsum">
+              {{i.description}}
+            </p>
+          </div>
+          <div class="bookNowContainer selectors mt-4 me-5">
+            <img
+              class="bookNowIcon"
+              [src]="blackArrowToTheRight"
+              alt=""
+            />
+            <span class="font bookNowText">BOOK NOW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="boxFlexForElements">
+    <div class="mt-5 containerBook mb-4">
+      <div>
+        <img
+          class="freeBook"
+          [src]="imgBook"
+          alt=""
+        />
+        <h4 class="font freeText">
+          {{ (buysElement?.main_title)![0] }}
+          {{ (buysElement?.main_title)![1] }}
+          {{ (buysElement?.main_title)![3] }} <br />
+          {{ (buysElement?.main_title)![4] }} <br />
+          {{ (buysElement?.main_title)![5] }}
+          {{ (buysElement?.main_title)![6] }}
+          {{ (buysElement?.main_title)![7] }}
+        </h4>
+      </div>
+    </div>
+    <div class="inputsContainer">
+      <div>
+        <h4 class="font freeTextWeb">
+          {{ (buysElement?.main_title)![0] }}
+          {{ (buysElement?.main_title)![1] }}
+          {{ (buysElement?.main_title)![2] }}
+          {{ (buysElement?.main_title)![3] }} <br />
+          {{ (buysElement?.main_title)![4] }}
+          {{ (buysElement?.main_title)![5] }}
+        </h4>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-lg">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Name</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="centerButton mb-5">
+              <button class="btn registerForFreeBook" type="button">
+                <img
+                  class="bookNowIcon"
+                  [src]="blackArrowToTheRight"
+                  alt=""
+                />
+                <span class="font bookNowText">{{ buysElement?.span }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="buysElement" class="bookConditionContainer mb-5">
+        <p>
+          {{ buysElement.alert }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <swiper-container
+    class="swiperContainerWeb"
+    slides-per-view="4"
+    speed="500"
+    [loop]="true"
+  >
+    <swiper-slide *ngFor="let item of imgCarousel">
+      <img [src]="item.img" alt="" />
+    </swiper-slide>
+  </swiper-container>
+  <div class="containerWidthSwiper">
+    <swiper-container
+      class="swiperMobile"
+      slides-per-view="1"
+      speed="500"
+      [loop]="true"
+    >
+      <swiper-slide *ngFor="let item of imgCarousel">
+        <img [src]="item.url" alt="" />
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</div>

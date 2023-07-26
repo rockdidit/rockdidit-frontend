@@ -1,0 +1,153 @@
+$color: #c7e902;
+
+.font{
+  font-family: 'Poppins', sans-serif;
+}
+.titleContainer{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  h1{
+    z-index: 1;
+    text-align: center;
+    @media screen and (max-width: 1000px){
+      font-size: 2rem;
+    }
+    font-size:  5rem;
+  }
+
+}
+
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes moveBack {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.containerOnlyRow:hover {
+  img {
+    animation: moveRight 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow:not(:hover) {
+  img {
+    animation: moveBack 0.5s ease-in-out forwards;
+  }
+}
+
+.containerOnlyRow{
+  img{
+    transition: transform 0.5s ease-in-out;
+    width: 15rem;
+    position: absolute;
+    margin-right: 20rem;
+    margin-top: -5.2rem;
+    margin-bottom: -24rem;
+    @media screen and (max-width: 1000px) {
+      margin-right: 0;
+      width: 8rem;
+      margin-top: -2.75rem;
+      margin-right: 3rem;
+    }
+  }
+  margin: auto;
+  justify-content: end;
+  display: flex;
+}
+
+@media screen and (min-width: 1000px) {
+  .contianerHeader{
+    width: 40%;
+  }
+  .containerText{
+    p{
+      margin-left: 20rem !important;
+      margin-right: 20rem !important;
+    }
+  }
+}
+
+.containerText{
+  display: flex;
+  margin: auto ;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  p{
+    margin-right: 4rem;
+    margin-left: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+$color: #c7e902;
+
+
+
+// .containerRomboide1{
+//   position: absolute;
+//   z-index: -1;
+//   padding-top: 1rem;
+//   padding-left: 34.8rem;
+// }
+
+// .romboide1 {
+//   @media screen and (max-width: 1000px){
+//     width: 10rem;
+//     height: 5rem;
+//   }
+//   z-index: -1;
+//   width: 300px;
+//   height: 100px;
+//   background-color: $color;
+// }
+
+// .triangulo1 {
+//   z-index: -1;
+//   width: 0;
+//   height: 0;
+//   border-top: 100px solid rgb(255, 255, 255);
+//   border-right: 100px solid transparent;
+// }
+
+// .romboide2 {
+//   @media screen and (max-width: 1000px){
+//     width: 5rem;
+//     height: 10rem;
+//   }
+//   width: 100px;
+//   height: 200px;
+//   transform: skew(0deg);
+//   background-color: $color;
+// }
+
+// .triangulo2 {
+//   width: 0;
+//   height: 0;
+//   border-bottom: 100px solid black;
+//   border-left: 100px solid transparent;
+//   @media screen and (max-width: 1000px) {
+//     padding-bottom: 3.8rem;
+//   }
+//   padding-bottom: 6.3rem;
+// }
+
+// .containerRomboide{
+
+// }
+

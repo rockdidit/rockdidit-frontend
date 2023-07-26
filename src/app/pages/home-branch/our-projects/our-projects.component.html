@@ -1,0 +1,34 @@
+<div class="containerWeb">
+  <div>
+    <div class="title">
+      <h1 class="fontWeb">
+        {{main_title}}
+      </h1>
+    </div>
+    <div class="boxWeb">
+      <ng-container *ngFor="let i of projects">
+        <div class="boxOutProjects">
+          <div class="containerimg">
+            <img class="allImgDiv" [src]="i.img" alt="" />
+          </div>
+          <div class="priceImg">
+            <div class="wallet">
+              <span class="material-symbols-outlined"> wallet </span>
+            </div>
+            <div class="textFont">
+              <p>
+                {{ i.detail }}
+              </p>
+            </div>
+          </div>
+          <div class="fontPoppins projectsTitle">
+            <h3>
+              {{ i.title }}
+            </h3>
+            <img [src]="arrowToTheRight" alt="">
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

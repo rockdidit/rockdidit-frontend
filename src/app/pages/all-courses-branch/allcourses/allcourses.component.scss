@@ -1,0 +1,36 @@
+// .principalContainer{
+
+// }
+
+.containerImg{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}
+
+
+.form-select{
+  cursor: pointer;
+  option{
+    cursor: pointer;
+  }
+}
+
+// .selectorAndImg{
+
+// }
+
+.containerSelector{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  margin-right: 1rem;
+  @media screen and (max-width: 1000px) {
+    width: 15rem;
+  }
+  width: 20rem;
+}

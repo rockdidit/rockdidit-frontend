@@ -1,0 +1,172 @@
+<div class="containerWeb">
+  <div class="iconContainer">
+    <img [src]="runningMan" class="iconPerson" />
+  </div>
+  <div *ngIf="main_title" class="titleContainer">
+    <h1 class="font titleJoin">
+      {{ main_title![0] }} <br />
+      {{ main_title![1] }}
+    </h1>
+  </div>
+  <div class="containerOffers">
+    <div class="boxFlexForPass">
+      <ng-container *ngFor="let item of passArr; let index = index">
+        <div
+          class="divOffer"
+          [class.selected]="offerSelected[index]"
+          (click)="selectOffer(index)"
+        >
+          <div class="centerContainerDimension">
+            <div class="dimensionContainer">
+              <label class="radio-inline"
+                ><input
+                  class="black-radio"
+                  [checked]="offerSelected[index]"
+                  type="radio"
+                  name="optradio"
+                  checked
+              /></label>
+              <h1 class="font joinTitle">{{ item.title }}</h1>
+              <p class="font subTitleJoin joinTitle">{{ item.duration }}</p>
+              <p class="text-center">
+                {{ item.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="personalInfoContainer">
+    <div class="containerSecondary">
+      <h4 class="font joinTitle">PERSONAL INFORMATION:</h4>
+      <div class="inputsContainer">
+        <div>
+          <div class="containerName">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Name"
+              />
+              <label for="floatingPassword">Name</label>
+            </div>
+          </div>
+          <div class="boxgGenderDate">
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Gender
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Male</a></li>
+                <li><a class="dropdown-item" href="#">Female</a></li>
+                <li><a class="dropdown-item" href="#">Other</a></li>
+              </ul>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/aaaa"
+              />
+              <label for="floatingInput">dd/mm/aaaa</label>
+            </div>
+          </div>
+
+          <div class="boxStreetCAndS">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="street address"
+              />
+              <label for="floatingInput">Street address</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="city"
+              />
+              <label for="floatingPassword">City</label>
+            </div>
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                State
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Alabama</a></li>
+                <li><a class="dropdown-item" href="#">Alaska</a></li>
+                <li><a class="dropdown-item" href="#">Arizona</a></li>
+                <li><a class="dropdown-item" href="#">Arkansas</a></li>
+                <li><a class="dropdown-item" href="#">California</a></li>
+                <!-- Aquí puedes añadir más estados -->
+              </ul>
+            </div>
+          </div>
+          <div class="boxStreetCAndS">
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Zip code"
+              />
+              <label for="floatingInput">zip code</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Email"
+              />
+              <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Phone"
+              />
+              <label for="floatingInput">Phone</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="termsContainer">
+    <label class="checkbox-inline termsContainer"
+      ><input type="checkbox" value="" />&nbsp; I agree to the terms and
+      conditions of storage of my personal data.</label
+    >
+  </div>
+  <div class="buttonSend mt-5">
+    <div class="mb-5 selectors buttonSend">
+      <img [src]="blackArrowToTheRight" alt="" />
+      <span class="font sendH4">CONTINUE</span>
+    </div>
+  </div>
+</div>
+<div class="triangle-container">
+  <div class="triangle"></div>
+  <div class="followRock">
+    <span class="font followText"> {{followSpan[0]}} </span>
+    <span class="font Rock"> {{followSpan[1]}} </span>
+  </div>
+</div>

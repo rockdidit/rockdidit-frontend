@@ -1,0 +1,50 @@
+<div class="containerWidth">
+  <div class="coursesDesigned pt-5">
+    <ng-container *ngIf="main_title">
+      <h2 class="title">{{ main_title[0] }} {{ main_title[1] }}</h2>
+    </ng-container>
+  </div>
+  <div class="coursesDesigned">
+    <ng-container *ngIf="main_title">
+      <h1 class="secondaryTitle">{{ main_title[2] }} {{ main_title[3] }}</h1>
+    </ng-container>
+  </div>
+  <div class="containerCoursesFlex">
+    <ng-container *ngFor="let item of courses; let index = index">
+      <div class="containerImgsWeb">
+        <div class="allImgDiv">
+          <img class="imgDimentionsForCourses" [src]="item.img" alt="" />
+        </div>
+        <div class="subtitleDiv">
+          <div class="coursesTitles">
+            <ng-container *ngIf="index === 2">
+              <h2 class="subTitleCourses">
+                {{ item.title[0] }} <br />
+                {{ item.title[1] }}  {{ item.title[2] }}
+              </h2>
+            </ng-container>
+            <ng-container *ngIf="index === 1 || index === 3">
+              <h2 class="subTitleCourses">
+                {{ item.title[0] }} {{ item.title[1] }} <br />
+                {{ item.title[2] }}
+              </h2>
+            </ng-container>
+            <ng-container *ngIf="index === 0">
+              <h2 class="subTitleCourses">
+                {{ item.title[0] }} <br />
+                {{ item.title[1] }}
+              </h2>
+            </ng-container>
+            <div class="marginForRight">
+              <img [src]="arrowToTheRight" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="d-flex marginAutoViewAll">
+    <img [src]="arrowToTheRight" alt="" />
+    <h2 class="viewAll">View All</h2>
+  </div>
+</div>

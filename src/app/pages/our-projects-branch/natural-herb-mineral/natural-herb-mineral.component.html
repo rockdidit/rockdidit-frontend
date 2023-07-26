@@ -1,0 +1,44 @@
+<div class="containerBackGround">
+  <div class="containerDisplay">
+    <div class="containerWeb">
+      <div class="containerOnlyRow">
+        <img [src]="diagonalArrowToTheRight" alt="" />
+      </div>
+      <div class="titleContainer">
+        <ng-template #elseTitleArr> Cargando... </ng-template>
+        <h3 *ngIf="titleArr; else elseTitleArr" class="font">
+          {{ titleArr[0] }} <br />
+          {{ titleArr[1] }} {{ titleArr[2] }} <br />
+          {{ titleArr[3] }}
+        </h3>
+      </div>
+      <div class="mb-5">
+        <div class="titleContainerWeb displayNoneMobile">
+          <ng-template #elseTitleArr> Cargando... </ng-template>
+          <h3 *ngIf="titleArr; else elseTitleArr" class="font">
+            {{ titleArr[0] }} <br />
+            {{ titleArr[1] }} {{ titleArr[2] }} <br />
+            {{ titleArr[3] }}
+          </h3>
+        </div>
+        <div class="containerText">
+          <p>
+            {{ description }}
+          </p>
+        </div>
+        <div class="containerButton">
+          <app-visit-project-button
+            [blackArrowToTheRight]="blackArrowToTheRight"
+            buttonContent="VISIT PROJECT"
+          ></app-visit-project-button>
+        </div>
+      </div>
+      <div class="containerImg">
+        <img
+          [src]="naturalHerbMineralsImg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
